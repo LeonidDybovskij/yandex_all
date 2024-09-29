@@ -1,0 +1,2159 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tariff statistics &#8212; Data Science course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tariff_stats';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Analysis of the computer games market" href="computer_games.html" />
+    <link rel="prev" title="Real estate market analysis in St. Petersburg" href="real_estate_market_analysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science course</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Data Science course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="credit_scoring.html">Credit scoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_estate_market_analysis.html">Real estate market analysis in St. Petersburg</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tariff statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer_games.html">Analysis of the computer games market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tariff_recommendation.html">Tariff recommendation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supervised_classification.html">Customer churn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oil_bootstrap.html">Selection of a location for a well</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gold_recovery.html">Gold recovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_transformation.html">Protection of customers’ personal data</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="cars_boosting.html">Cars cost determination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxi_time_series.html">Taxi orders prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text_classification.html">Classification of comments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer_vision.html">Age prediction by photo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression_metallurgy.html">Steel temperature prediction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tariff_stats.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tariff statistics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#call-data">Call data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-internet-usage-data">Mobile Internet usage data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sms-data">SMS data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tariff-data">Tariff data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-data">User data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">Data preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-and-revenue-calculation">Data analysis and revenue calculation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calls">Calls</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">Messages</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internet">Internet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-by-tariff">Difference by tariff</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-by-city">Difference by city</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tariff-statistics">
+<h1>Tariff statistics<a class="headerlink" href="#tariff-statistics" title="Link to this heading">#</a></h1>
+<p>The task is to analyze data on customer usage of two different tariffs and test two hypotheses about the total revenue.</p>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span> <span class="k">as</span> <span class="n">st</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="call-data">
+<h3>Call data<a class="headerlink" href="#call-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">calls</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;calls.csv&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">calls</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/calls.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>call_date</th>
+      <th>duration</th>
+      <th>user_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1000_0</td>
+      <td>2018-07-25</td>
+      <td>0.00</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1000_1</td>
+      <td>2018-08-17</td>
+      <td>0.00</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1000_2</td>
+      <td>2018-06-11</td>
+      <td>2.85</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1000_3</td>
+      <td>2018-09-21</td>
+      <td>13.80</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1000_4</td>
+      <td>2018-12-15</td>
+      <td>5.18</td>
+      <td>1000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 202607 entries, 0 to 202606
+Data columns (total 4 columns):
+ #   Column     Non-Null Count   Dtype  
+---  ------     --------------   -----  
+ 0   id         202607 non-null  object 
+ 1   call_date  202607 non-null  object 
+ 2   duration   202607 non-null  float64
+ 3   user_id    202607 non-null  int64  
+dtypes: float64(1), int64(1), object(2)
+memory usage: 6.2+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="_images/b115cfb0dbe77baac2f2c090a435bd31b37a4dfbeee3d0bebacfa9be44c634eb.png" src="_images/b115cfb0dbe77baac2f2c090a435bd31b37a4dfbeee3d0bebacfa9be44c634eb.png" />
+</div>
+</div>
+</section>
+<section id="mobile-internet-usage-data">
+<h3>Mobile Internet usage data<a class="headerlink" href="#mobile-internet-usage-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">sessions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;internet.csv&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">sessions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/internet.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sessions</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>id</th>
+      <th>mb_used</th>
+      <th>session_date</th>
+      <th>user_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1000_0</td>
+      <td>112.95</td>
+      <td>2018-11-25</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1000_1</td>
+      <td>1052.81</td>
+      <td>2018-09-07</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1000_2</td>
+      <td>1197.26</td>
+      <td>2018-06-25</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>1000_3</td>
+      <td>550.27</td>
+      <td>2018-08-22</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>1000_4</td>
+      <td>302.56</td>
+      <td>2018-09-24</td>
+      <td>1000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sessions</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 149396 entries, 0 to 149395
+Data columns (total 5 columns):
+ #   Column        Non-Null Count   Dtype  
+---  ------        --------------   -----  
+ 0   Unnamed: 0    149396 non-null  int64  
+ 1   id            149396 non-null  object 
+ 2   mb_used       149396 non-null  float64
+ 3   session_date  149396 non-null  object 
+ 4   user_id       149396 non-null  int64  
+dtypes: float64(1), int64(2), object(2)
+memory usage: 5.7+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sessions</span><span class="p">[</span><span class="s1">&#39;mb_used&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="_images/dc04cc24ed376d70104764db5d1ab7c1344bfd74a2015eb18f130bc241326f2f.png" src="_images/dc04cc24ed376d70104764db5d1ab7c1344bfd74a2015eb18f130bc241326f2f.png" />
+</div>
+</div>
+</section>
+<section id="sms-data">
+<h3>SMS data<a class="headerlink" href="#sms-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;messages.csv&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/messages.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">messages</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>message_date</th>
+      <th>user_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1000_0</td>
+      <td>2018-06-27</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1000_1</td>
+      <td>2018-10-08</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1000_2</td>
+      <td>2018-08-04</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1000_3</td>
+      <td>2018-06-16</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1000_4</td>
+      <td>2018-12-05</td>
+      <td>1000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">messages</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 123036 entries, 0 to 123035
+Data columns (total 3 columns):
+ #   Column        Non-Null Count   Dtype 
+---  ------        --------------   ----- 
+ 0   id            123036 non-null  object
+ 1   message_date  123036 non-null  object
+ 2   user_id       123036 non-null  int64 
+dtypes: int64(1), object(2)
+memory usage: 2.8+ MB
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tariff-data">
+<h3>Tariff data<a class="headerlink" href="#tariff-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">tariffs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;tariffs.csv&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">tariffs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/tariffs.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tariffs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>messages_included</th>
+      <th>mb_per_month_included</th>
+      <th>minutes_included</th>
+      <th>rub_monthly_fee</th>
+      <th>rub_per_gb</th>
+      <th>rub_per_message</th>
+      <th>rub_per_minute</th>
+      <th>tariff_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>50</td>
+      <td>15360</td>
+      <td>500</td>
+      <td>550</td>
+      <td>200</td>
+      <td>3</td>
+      <td>3</td>
+      <td>smart</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1000</td>
+      <td>30720</td>
+      <td>3000</td>
+      <td>1950</td>
+      <td>150</td>
+      <td>1</td>
+      <td>1</td>
+      <td>ultra</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tariffs</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 8 columns):
+ #   Column                 Non-Null Count  Dtype 
+---  ------                 --------------  ----- 
+ 0   messages_included      2 non-null      int64 
+ 1   mb_per_month_included  2 non-null      int64 
+ 2   minutes_included       2 non-null      int64 
+ 3   rub_monthly_fee        2 non-null      int64 
+ 4   rub_per_gb             2 non-null      int64 
+ 5   rub_per_message        2 non-null      int64 
+ 6   rub_per_minute         2 non-null      int64 
+ 7   tariff_name            2 non-null      object
+dtypes: int64(7), object(1)
+memory usage: 256.0+ bytes
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="user-data">
+<h3>User data<a class="headerlink" href="#user-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;users.csv&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/users.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>age</th>
+      <th>churn_date</th>
+      <th>city</th>
+      <th>reg_date</th>
+      <th>tariff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1000</td>
+      <td>52</td>
+      <td>NaN</td>
+      <td>Krasnodar</td>
+      <td>2018-05-25</td>
+      <td>ultra</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1001</td>
+      <td>41</td>
+      <td>NaN</td>
+      <td>Moscow</td>
+      <td>2018-11-01</td>
+      <td>smart</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1002</td>
+      <td>59</td>
+      <td>NaN</td>
+      <td>Sterlitamak</td>
+      <td>2018-06-17</td>
+      <td>smart</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1003</td>
+      <td>23</td>
+      <td>NaN</td>
+      <td>Moscow</td>
+      <td>2018-08-17</td>
+      <td>ultra</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1004</td>
+      <td>68</td>
+      <td>NaN</td>
+      <td>Novokuznetsk</td>
+      <td>2018-05-14</td>
+      <td>ultra</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 500 entries, 0 to 499
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   user_id     500 non-null    int64 
+ 1   age         500 non-null    int64 
+ 2   churn_date  38 non-null     object
+ 3   city        500 non-null    object
+ 4   reg_date    500 non-null    object
+ 5   tariff      500 non-null    object
+dtypes: int64(2), object(4)
+memory usage: 23.6+ KB
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="data-preprocessing">
+<h2>Data preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h2>
+<p>Let’s convert the dates to the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> format .</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;reg_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;reg_date&#39;</span><span class="p">])</span>
+<span class="n">users</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">])</span>
+
+<span class="n">calls</span><span class="p">[</span><span class="s1">&#39;call_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">calls</span><span class="p">[</span><span class="s1">&#39;call_date&#39;</span><span class="p">])</span>
+
+<span class="n">messages</span><span class="p">[</span><span class="s1">&#39;message_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">messages</span><span class="p">[</span><span class="s1">&#39;message_date&#39;</span><span class="p">])</span>
+<span class="n">sessions</span><span class="p">[</span><span class="s1">&#39;session_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">sessions</span><span class="p">[</span><span class="s1">&#39;session_date&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calls with zero duration are known to indicate missed calls.</p>
+<p>Let’s round up the duration of the calls to minutes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">calls</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s remove the excessive index in the data about calls made.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sessions</span> <span class="o">=</span> <span class="n">sessions</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It would be useful to put the month in a separate category.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls</span><span class="p">[</span><span class="s1">&#39;call_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">calls</span><span class="p">[</span><span class="s1">&#39;call_date&#39;</span><span class="p">],</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">messages</span><span class="p">[</span><span class="s1">&#39;message_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">messages</span><span class="p">[</span><span class="s1">&#39;message_date&#39;</span><span class="p">],</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">sessions</span><span class="p">[</span><span class="s1">&#39;session_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">sessions</span><span class="p">[</span><span class="s1">&#39;session_date&#39;</span><span class="p">],</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">calls</span><span class="p">[</span><span class="s1">&#39;call_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="n">messages</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">messages</span><span class="p">[</span><span class="s1">&#39;message_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="n">sessions</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sessions</span><span class="p">[</span><span class="s1">&#39;session_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s calculate the number of calls, the number of minutes, the number of messages, and the number of spent megabytes for each user by month.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls_per_month</span> <span class="o">=</span> <span class="n">calls</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">calls</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">))</span>
+<span class="n">minutes_per_month</span> <span class="o">=</span> <span class="n">calls</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;sum&#39;</span><span class="p">))</span>
+<span class="n">messages_per_month</span> <span class="o">=</span> <span class="n">messages</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">messages</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;message_date&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">))</span>
+<span class="n">sessions_per_month</span> <span class="o">=</span> <span class="n">sessions</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;mb_used&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calls_per_month</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>calls</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th>month</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="8" valign="top">1000</th>
+      <th>5</th>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1001</th>
+      <th>11</th>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>63</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes_per_month</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>minutes</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th>month</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="8" valign="top">1000</th>
+      <th>5</th>
+      <td>159</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>172</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>340</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>408</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>466</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>350</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>338</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>333</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1001</th>
+      <th>11</th>
+      <td>430</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>414</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">messages_per_month</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>messages</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th>month</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="8" valign="top">1000</th>
+      <th>5</th>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>75</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1002</th>
+      <th>6</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sessions_per_month</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>mb_used</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th>month</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="8" valign="top">1000</th>
+      <th>5</th>
+      <td>2253.49</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>23233.77</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>14003.64</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>14055.93</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>14568.91</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>14702.49</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>14756.47</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>9817.61</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1001</th>
+      <th>11</th>
+      <td>18429.34</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>14036.66</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="data-analysis-and-revenue-calculation">
+<h2>Data analysis and revenue calculation<a class="headerlink" href="#data-analysis-and-revenue-calculation" title="Link to this heading">#</a></h2>
+<p>Let’s count the number of terminated contracts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">users</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.6
+</pre></div>
+</div>
+</div>
+</div>
+<p>These 7.6% are good to know, but do not affect statistical analysis.</p>
+<p>Let’s merge the obtained data into the dataframe <code class="docutils literal notranslate"><span class="pre">user_behavior</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span> <span class="o">=</span> <span class="n">calls_per_month</span>\
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">messages_per_month</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">sessions_per_month</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">minutes_per_month</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>\
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>\
+
+<span class="n">user_behavior</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>month</th>
+      <th>calls</th>
+      <th>messages</th>
+      <th>mb_used</th>
+      <th>minutes</th>
+      <th>age</th>
+      <th>churn_date</th>
+      <th>city</th>
+      <th>reg_date</th>
+      <th>tariff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1000</td>
+      <td>5</td>
+      <td>22.0</td>
+      <td>22.0</td>
+      <td>2253.49</td>
+      <td>159.0</td>
+      <td>52</td>
+      <td>NaT</td>
+      <td>Krasnodar</td>
+      <td>2018-05-25</td>
+      <td>ultra</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1000</td>
+      <td>6</td>
+      <td>43.0</td>
+      <td>60.0</td>
+      <td>23233.77</td>
+      <td>172.0</td>
+      <td>52</td>
+      <td>NaT</td>
+      <td>Krasnodar</td>
+      <td>2018-05-25</td>
+      <td>ultra</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1000</td>
+      <td>7</td>
+      <td>47.0</td>
+      <td>75.0</td>
+      <td>14003.64</td>
+      <td>340.0</td>
+      <td>52</td>
+      <td>NaT</td>
+      <td>Krasnodar</td>
+      <td>2018-05-25</td>
+      <td>ultra</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1000</td>
+      <td>8</td>
+      <td>52.0</td>
+      <td>81.0</td>
+      <td>14055.93</td>
+      <td>408.0</td>
+      <td>52</td>
+      <td>NaT</td>
+      <td>Krasnodar</td>
+      <td>2018-05-25</td>
+      <td>ultra</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1000</td>
+      <td>9</td>
+      <td>58.0</td>
+      <td>57.0</td>
+      <td>14568.91</td>
+      <td>466.0</td>
+      <td>52</td>
+      <td>NaT</td>
+      <td>Krasnodar</td>
+      <td>2018-05-25</td>
+      <td>ultra</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>And check the gaps in the table after the merge:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>user_id          0
+month            0
+calls           40
+messages       497
+mb_used         11
+minutes         40
+age              0
+churn_date    3027
+city             0
+reg_date         0
+tariff           0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The resulting gaps in this case should be filed with zeros:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;calls&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;calls&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;minutes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;minutes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;messages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;messages&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;mb_used&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;mb_used&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now attaching information about the tariffs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tariffs</span> <span class="o">=</span> <span class="n">tariffs</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;tariff_name&#39;</span><span class="p">:</span> <span class="s1">&#39;tariff&#39;</span><span class="p">})</span> <span class="c1"># a shorter name is more handy</span>
+<span class="n">user_behavior</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">tariffs</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;tariff&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s estimate the number of talk minutes, messages and megabytes that exceed the tariff plan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_minutes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;minutes&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;minutes_included&#39;</span><span class="p">]</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_messages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;messages&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;messages_included&#39;</span><span class="p">]</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_mb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;mb_used&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;mb_per_month_included&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;paid_messages&#39;</span><span class="p">,</span> <span class="s1">&#39;paid_minutes&#39;</span><span class="p">,</span> <span class="s1">&#39;paid_mb&#39;</span><span class="p">]:</span>
+    <span class="n">user_behavior</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">user_behavior</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To evaluate the overrun, we have to convert exceeding megabytes into gigabytes and put them in a separate column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_gb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_mb&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s calculate the revenue from minutes of talk, messaging and internet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;cost_minutes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_minutes&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;rub_per_minute&#39;</span><span class="p">]</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;cost_messages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_messages&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;rub_per_message&#39;</span><span class="p">]</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;cost_gb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;paid_gb&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;rub_per_gb&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The monthly revenue for each user.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;total_cost&#39;</span><span class="p">]</span> <span class="o">=</span> \
+      <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;rub_monthly_fee&#39;</span><span class="p">]</span>\
+    <span class="o">+</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;cost_minutes&#39;</span><span class="p">]</span>\
+    <span class="o">+</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;cost_messages&#39;</span><span class="p">]</span>\
+    <span class="o">+</span> <span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;cost_gb&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="statistics">
+<h3>Statistics<a class="headerlink" href="#statistics" title="Link to this heading">#</a></h3>
+<p>It eould be easier to collect statistics on «month-tariff» pairs into a separate dataframe <code class="docutils literal notranslate"><span class="pre">stats_df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we take the mean, standard deviation and median into account</span>
+<span class="n">stats_df</span> <span class="o">=</span> <span class="n">user_behavior</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+            <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;tariff&#39;</span><span class="p">],</span>
+            <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;calls&#39;</span><span class="p">,</span> <span class="s1">&#39;minutes&#39;</span><span class="p">,</span> <span class="s1">&#39;messages&#39;</span><span class="p">,</span> <span class="s1">&#39;mb_used&#39;</span><span class="p">],</span>
+            <span class="n">aggfunc</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="s1">&#39;median&#39;</span><span class="p">]</span> 
+<span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">stats_df</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;tariff&#39;</span><span class="p">,</span> <span class="s1">&#39;calls_mean&#39;</span><span class="p">,</span> <span class="s1">&#39;sessions_mean&#39;</span><span class="p">,</span> <span class="s1">&#39;messages_mean&#39;</span><span class="p">,</span> <span class="s1">&#39;minutes_mean&#39;</span><span class="p">,</span>
+                                     <span class="s1">&#39;calls_std&#39;</span><span class="p">,</span>  <span class="s1">&#39;sessions_std&#39;</span><span class="p">,</span> <span class="s1">&#39;messages_std&#39;</span><span class="p">,</span> <span class="s1">&#39;minutes_std&#39;</span><span class="p">,</span> 
+                                     <span class="s1">&#39;calls_median&#39;</span><span class="p">,</span> <span class="s1">&#39;sessions_median&#39;</span><span class="p">,</span> <span class="s1">&#39;messages_median&#39;</span><span class="p">,</span>  <span class="s1">&#39;minutes_median&#39;</span><span class="p">]</span>
+
+<span class="n">stats_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>tariff</th>
+      <th>calls_mean</th>
+      <th>sessions_mean</th>
+      <th>messages_mean</th>
+      <th>minutes_mean</th>
+      <th>calls_std</th>
+      <th>sessions_std</th>
+      <th>messages_std</th>
+      <th>minutes_std</th>
+      <th>calls_median</th>
+      <th>sessions_median</th>
+      <th>messages_median</th>
+      <th>minutes_median</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>smart</td>
+      <td>27.68</td>
+      <td>8513.72</td>
+      <td>18.24</td>
+      <td>203.85</td>
+      <td>20.81</td>
+      <td>6444.68</td>
+      <td>16.20</td>
+      <td>154.23</td>
+      <td>20.5</td>
+      <td>7096.18</td>
+      <td>15.0</td>
+      <td>162.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>ultra</td>
+      <td>59.44</td>
+      <td>13140.68</td>
+      <td>33.78</td>
+      <td>428.11</td>
+      <td>41.64</td>
+      <td>6865.35</td>
+      <td>30.67</td>
+      <td>269.76</td>
+      <td>51.0</td>
+      <td>14791.37</td>
+      <td>32.0</td>
+      <td>382.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>smart</td>
+      <td>40.19</td>
+      <td>11597.05</td>
+      <td>24.09</td>
+      <td>298.69</td>
+      <td>25.39</td>
+      <td>6247.35</td>
+      <td>21.75</td>
+      <td>190.82</td>
+      <td>38.5</td>
+      <td>12553.71</td>
+      <td>20.0</td>
+      <td>258.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>ultra</td>
+      <td>41.54</td>
+      <td>11775.94</td>
+      <td>21.96</td>
+      <td>297.12</td>
+      <td>40.97</td>
+      <td>10644.64</td>
+      <td>26.77</td>
+      <td>296.51</td>
+      <td>25.0</td>
+      <td>7327.12</td>
+      <td>5.5</td>
+      <td>168.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>smart</td>
+      <td>54.32</td>
+      <td>15104.16</td>
+      <td>31.86</td>
+      <td>390.05</td>
+      <td>25.54</td>
+      <td>5828.24</td>
+      <td>26.80</td>
+      <td>191.89</td>
+      <td>59.0</td>
+      <td>15670.25</td>
+      <td>23.0</td>
+      <td>409.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>ultra</td>
+      <td>67.68</td>
+      <td>17535.55</td>
+      <td>32.30</td>
+      <td>489.65</td>
+      <td>44.84</td>
+      <td>10951.79</td>
+      <td>41.62</td>
+      <td>333.74</td>
+      <td>57.0</td>
+      <td>17495.18</td>
+      <td>20.0</td>
+      <td>403.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4</td>
+      <td>smart</td>
+      <td>51.31</td>
+      <td>13462.18</td>
+      <td>30.74</td>
+      <td>367.13</td>
+      <td>25.70</td>
+      <td>5698.25</td>
+      <td>24.54</td>
+      <td>186.49</td>
+      <td>52.0</td>
+      <td>14087.65</td>
+      <td>28.0</td>
+      <td>368.5</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>4</td>
+      <td>ultra</td>
+      <td>64.09</td>
+      <td>16828.13</td>
+      <td>31.56</td>
+      <td>458.02</td>
+      <td>36.27</td>
+      <td>9718.65</td>
+      <td>37.51</td>
+      <td>267.68</td>
+      <td>61.0</td>
+      <td>16645.78</td>
+      <td>17.0</td>
+      <td>453.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>5</td>
+      <td>smart</td>
+      <td>55.24</td>
+      <td>15805.18</td>
+      <td>33.77</td>
+      <td>387.36</td>
+      <td>25.38</td>
+      <td>5978.23</td>
+      <td>27.04</td>
+      <td>186.60</td>
+      <td>59.0</td>
+      <td>16323.94</td>
+      <td>30.0</td>
+      <td>433.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>5</td>
+      <td>ultra</td>
+      <td>72.51</td>
+      <td>19363.15</td>
+      <td>37.85</td>
+      <td>510.33</td>
+      <td>41.08</td>
+      <td>10046.11</td>
+      <td>40.31</td>
+      <td>289.60</td>
+      <td>75.0</td>
+      <td>18696.43</td>
+      <td>25.0</td>
+      <td>519.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="calls">
+<h3>Calls<a class="headerlink" href="#calls" title="Link to this heading">#</a></h3>
+<p>Let’s plot the distribution of the mean number of calls by tariff type and month.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;month&#39;</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="s1">&#39;calls_mean&#39;</span><span class="p">,</span>
+            <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;tariff&quot;</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">stats_df</span><span class="p">,</span>
+            <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribution of the number of calls by tariff type and month&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Month number&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Average number of calls&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d99159791cc52dedd0d1105d5a05b9e09f0d0fb2a9a2ab9cb40947d3fed57721.png" src="_images/d99159791cc52dedd0d1105d5a05b9e09f0d0fb2a9a2ab9cb40947d3fed57721.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;tariff&#39;</span><span class="p">)[</span><span class="s1">&#39;calls&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Smart&#39;</span><span class="p">,</span> <span class="s1">&#39;Ultra&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of calls&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of clients&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/528ee4497d20bf62fab2e600d7949d439c2be1e97e25bace48c180fcca64af28.png" src="_images/528ee4497d20bf62fab2e600d7949d439c2be1e97e25bace48c180fcca64af28.png" />
+</div>
+</div>
+<p>As well as the mean duration of the calls:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;month&#39;</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="s1">&#39;minutes_mean&#39;</span><span class="p">,</span>
+            <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;tariff&quot;</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">stats_df</span><span class="p">,</span>
+            <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribution of call duration by tariff type and month&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Month number&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Average duration of calls&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3607f603d13a8afe9ac2824c1abc0a8142071e6b36683ad9913e8284e1594c13.png" src="_images/3607f603d13a8afe9ac2824c1abc0a8142071e6b36683ad9913e8284e1594c13.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;tariff&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;smart&#39;</span><span class="p">][</span><span class="s1">&#39;minutes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;tariff&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;ultra&#39;</span><span class="p">][</span><span class="s1">&#39;minutes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8cc3ecf26090b059e2eff8e4867163e5e7b48b3657be93cffa0f2d87dec801e1.png" src="_images/8cc3ecf26090b059e2eff8e4867163e5e7b48b3657be93cffa0f2d87dec801e1.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>The mean duration of calls for Ultra tariff subscribers is longer than for Smart subscribers.</p></li>
+<li><p>During the year, users of both tariffs increase the mean duration of their calls.</p></li>
+<li><p>The growth of the mean duration of calls for Smart subscribers is uniform throughout the year, while Ultra users do not show such a trend.</p></li>
+<li><p>In February, subscribers of both tariffs had the lowest rates.</p></li>
+</ul>
+<section id="messages">
+<h4>Messages<a class="headerlink" href="#messages" title="Link to this heading">#</a></h4>
+<p>Let’s now look at the message distributions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;month&#39;</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="s1">&#39;messages_mean&#39;</span><span class="p">,</span>
+            <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;tariff&quot;</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">stats_df</span><span class="p">,</span>
+            <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribution of number of messages by tariff type and month&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Month number&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Mean number of messages&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cac635efb6088fa8ac7de255d7fad2f9871046fd6f91eacfc6e5d66c47a0abfa.png" src="_images/cac635efb6088fa8ac7de255d7fad2f9871046fd6f91eacfc6e5d66c47a0abfa.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;tariff&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;smart&#39;</span><span class="p">][</span><span class="s1">&#39;messages&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;tariff&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;ultra&#39;</span><span class="p">][</span><span class="s1">&#39;messages&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9d26015377884c42609bd46c788f3661be0ad36ec9af5c2fdd7f81fa95998734.png" src="_images/9d26015377884c42609bd46c788f3661be0ad36ec9af5c2fdd7f81fa95998734.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>The number of messages grows throughout the year on both tariffs.</p></li>
+<li><p>On average, Ultra users send more messages than Smart users (by almost 20 messages per month).</p></li>
+<li><p>The dynamics of sending messages is similar to the trends in the duration of conversations: in February, the lowest number of conversations for the year was observed, with Ultra users showing non-linear positive dynamics.</p></li>
+</ul>
+</section>
+</section>
+<section id="internet">
+<h3>Internet<a class="headerlink" href="#internet" title="Link to this heading">#</a></h3>
+<p>Let’s move on to the comparison of spent megabytes among users of Smart and Ultra tariffs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;month&#39;</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="s1">&#39;sessions_mean&#39;</span><span class="p">,</span>
+            <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;tariff&#39;</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">stats_df</span><span class="p">,</span>
+            <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribution of the amount of spent traffic (Mb) by tariff types and months&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Month number&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Mean number of megabytes&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/313faaae5150b81542666ab232c65e2d429d1582b52464fda88b6e1dd435ddd8.png" src="_images/313faaae5150b81542666ab232c65e2d429d1582b52464fda88b6e1dd435ddd8.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_behavior</span><span class="p">[</span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;tariff&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;smart&#39;</span><span class="p">][</span><span class="s1">&#39;mb_used&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">user_behavior</span><span class="p">[</span><span class="n">user_behavior</span><span class="p">[</span><span class="s1">&#39;tariff&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;ultra&#39;</span><span class="p">][</span><span class="s1">&#39;mb_used&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2ea42d5d5d218db0b8e86c392a75c6c9bc1d58b3841507e532a73447f2a85ed9.png" src="_images/2ea42d5d5d218db0b8e86c392a75c6c9bc1d58b3841507e532a73447f2a85ed9.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Users use the Internet the least in January, February and April.</p></li>
+<li><p>Smart subscribers usually spend 15-17 GB, while Ultra subscribers spend 19-21 GB.</p></li>
+</ul>
+</section>
+</section>
+<section id="hypothesis-testing">
+<h2>Hypothesis testing<a class="headerlink" href="#hypothesis-testing" title="Link to this heading">#</a></h2>
+<p>Let’s test two hypotheses:</p>
+<ol class="arabic simple">
+<li><p>The mean revenue from users of Smart and Ultra tariffs differs.</p></li>
+<li><p>The mean revenue from subscribers from Moscow differs from the mean revenue from subscribers from other regions.</p></li>
+</ol>
+<section id="difference-by-tariff">
+<h3>Difference by tariff<a class="headerlink" href="#difference-by-tariff" title="Link to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(H_0: Revenue\ from\ users\ of\ Ultra\ = Revenue\ from\ users\ of\ Smart\)</span><br />
+<span class="math notranslate nohighlight">\(H_1: Revenue\ from\ users\ of\ Ultra\ \neq Revenue\ from\ users\ of\ Smart\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span>
+    <span class="n">user_behavior</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;tariff == &quot;smart&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;total_cost&#39;</span><span class="p">],</span> 
+    <span class="n">user_behavior</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;tariff == &quot;ultra&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;total_cost&#39;</span><span class="p">],</span> 
+    <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">))</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="n">alpha</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rejecting the null hypothesis&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed to reject the null hypothesis&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.2606313931076085e-250
+Rejecting the null hypothesis
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="difference-by-city">
+<h3>Difference by city<a class="headerlink" href="#difference-by-city" title="Link to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(H_0: Revenue\ from\ users\ from\ Moscow\ = Revenue\ from\ users\ not\ from\ Moscow\)</span><br />
+<span class="math notranslate nohighlight">\(H_1: Revenue\ from\ users\ from\ Moscow\ \neq Revenue\ from\ users\ not\ from\ Moscow\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span>
+    <span class="n">user_behavior</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;city == &quot;Moscow&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;total_cost&#39;</span><span class="p">],</span> 
+    <span class="n">user_behavior</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;city != &quot;Moscow&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;total_cost&#39;</span><span class="p">],</span> 
+    <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">))</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="n">alpha</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rejecting the null hypothesis&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed to reject the null hypothesis&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5257376663729298
+Failed to reject the null hypothesis
+</pre></div>
+</div>
+</div>
+</div>
+<p>It turns out, one of the hypotheses was correct.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="real_estate_market_analysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Real estate market analysis in St. Petersburg</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="computer_games.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Analysis of the computer games market</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#call-data">Call data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-internet-usage-data">Mobile Internet usage data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sms-data">SMS data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tariff-data">Tariff data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-data">User data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">Data preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-and-revenue-calculation">Data analysis and revenue calculation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calls">Calls</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#messages">Messages</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internet">Internet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-by-tariff">Difference by tariff</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-by-city">Difference by city</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Leonid Dybovskii
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

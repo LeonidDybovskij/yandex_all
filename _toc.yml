@@ -1,0 +1,17 @@
+format: jb-book
+root: intro
+chapters:
+- file: credit_scoring
+- file: real_estate_market_analysis
+- file: tariff_stats
+- file: computer_games
+- file: tariff_recommendation
+- file: supervised_classification
+- file: oil_bootstrap
+- file: gold_recovery
+- file: data_transformation
+- file: cars_boosting
+- file: taxi_time_series
+- file: text_classification
+- file: computer_vision
+- file: regression_metallurgy

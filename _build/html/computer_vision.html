@@ -1,0 +1,975 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Age prediction by photo &#8212; Data Science course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'computer_vision';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Steel temperature prediction" href="regression_metallurgy.html" />
+    <link rel="prev" title="Classification of comments" href="text_classification.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science course</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Data Science course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="credit_scoring.html">Credit scoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_estate_market_analysis.html">Real estate market analysis in St. Petersburg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tariff_stats.html">Tariff statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer_games.html">Analysis of the computer games market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tariff_recommendation.html">Tariff recommendation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supervised_classification.html">Customer churn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oil_bootstrap.html">Selection of a location for a well</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gold_recovery.html">Gold recovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_transformation.html">Protection of customers’ personal data</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="cars_boosting.html">Cars cost determination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxi_time_series.html">Taxi orders prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text_classification.html">Classification of comments</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Age prediction by photo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression_metallurgy.html">Steel temperature prediction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/computer_vision.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Age prediction by photo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis">Exploratory data analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-size">Sample size</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-distribution">Data distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">Model training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="age-prediction-by-photo">
+<h1>Age prediction by photo<a class="headerlink" href="#age-prediction-by-photo" title="Link to this heading">#</a></h1>
+<section id="task">
+<h2>Task<a class="headerlink" href="#task" title="Link to this heading">#</a></h2>
+<p>A chain supermarket is implementing a computer vision system to process customer photos. Photofixing in the checkout area will help determine the age of customers in order to:</p>
+<ul class="simple">
+<li><p>Analyze purchases and suggest products that may be of interest to customers of this age group;</p></li>
+<li><p>Monitor the integrity of cashiers when selling alcohol.</p></li>
+</ul>
+<p>We need to build a model that determines the approximate age of a person from a photograph.
+Quality metric threshold: MAE &lt; 8.</p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
+<p>The training dataset was taken from the website <a class="reference external" href="http://chalearnlap.cvc.uab.es/dataset/26/description/">ChaLearn Looking at People</a>.</p>
+<p>The photos are in the folder <code class="docutils literal notranslate"><span class="pre">/datasets/faces/</span></code>.</p>
+<p>There is one folder with all the images <code class="docutils literal notranslate"><span class="pre">/final_files</span></code> and a CSV file  <code class="docutils literal notranslate"><span class="pre">labels.csv</span></code> with two columns: <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and <code class="docutils literal notranslate"><span class="pre">real_age</span></code>.</p>
+<p>We are going to retrieve the data from a folder using <a class="reference external" href="https://keras.io/preprocessing/image/"><code class="docutils literal notranslate"><span class="pre">ImageDataGenerator</span></code></a> — <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator"><code class="docutils literal notranslate"><span class="pre">flow_from_dataframe(dataframe,</span> <span class="pre">directory,</span> <span class="pre">...)</span></code></a>.</p>
+<p>It is <a class="reference external" href="http://people.ee.ethz.ch/~timofter/publications/Agustsson-FG-2017.pdf">known</a> that MAE = 5.4 can be achieved on this data.</p>
+<p>Citation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">tensorflow.keras.optimizers</span> <span class="kn">import</span> <span class="n">Adam</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.applications.resnet</span> <span class="kn">import</span> <span class="n">ResNet50</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">GlobalAveragePooling2D</span><span class="p">,</span> <span class="n">Dense</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-09-23 15:10:08.093052: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2024-09-23 15:10:08.093076: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exploratory-data-analysis">
+<h2>Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Link to this heading">#</a></h2>
+<p>Let’s have a look at the dataset and:</p>
+<ul class="simple">
+<li><p>Find out the sample size.</p></li>
+<li><p>Plot the distribution of age in the sample.</p></li>
+<li><p>Print 10-15 photos on the screen and see how the dataset is organized.</p></li>
+</ul>
+<p>We also shall estimate how the data specifics may affect model training.</p>
+<section id="sample-size">
+<h3>Sample size<a class="headerlink" href="#sample-size" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">labels_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;appa-real/gt_avg_train.csv&#39;</span><span class="p">)</span>
+    <span class="n">labels_valid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;appa-real/gt_avg_valid.csv&#39;</span><span class="p">)</span>
+    <span class="n">labels_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;appa-real/gt_avg_test.csv&#39;</span><span class="p">)</span>
+    
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">labels_train</span><span class="p">,</span> <span class="n">labels_valid</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">])[[</span><span class="s1">&#39;file_name&#39;</span><span class="p">,</span> <span class="s1">&#39;real_age&#39;</span><span class="p">]]</span>
+    
+    <span class="n">datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+    <span class="n">train_gen_flow</span> <span class="o">=</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow_from_dataframe</span><span class="p">(</span>
+            <span class="n">dataframe</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+            <span class="n">directory</span><span class="o">=</span><span class="s1">&#39;appa-real/all&#39;</span><span class="p">,</span>
+            <span class="n">x_col</span><span class="o">=</span><span class="s1">&#39;file_name&#39;</span><span class="p">,</span>
+            <span class="n">y_col</span><span class="o">=</span><span class="s1">&#39;real_age&#39;</span><span class="p">,</span>
+            <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+            <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> 
+            <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span>
+            <span class="n">seed</span><span class="o">=</span><span class="mi">12345</span><span class="p">)</span>
+    
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/faces/labels.csv&#39;</span><span class="p">)</span>
+    <span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+    <span class="n">train_gen_flow</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow_from_dataframe</span><span class="p">(</span>
+            <span class="n">dataframe</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+            <span class="n">directory</span><span class="o">=</span><span class="s1">&#39;/datasets/faces/final_files/&#39;</span><span class="p">,</span>
+            <span class="n">x_col</span><span class="o">=</span><span class="s1">&#39;file_name&#39;</span><span class="p">,</span>
+            <span class="n">y_col</span><span class="o">=</span><span class="s1">&#39;real_age&#39;</span><span class="p">,</span>
+            <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+            <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+            <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span>
+            <span class="n">seed</span><span class="o">=</span><span class="mi">12345</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 2395 validated image filenames.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/leonid/anaconda3/envs/practicum/lib/python3.9/site-packages/keras_preprocessing/image/dataframe_iterator.py:279: UserWarning: Found 5196 invalid image filename(s) in x_col=&quot;file_name&quot;. These filename(s) will be ignored.
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>file_name</th>
+      <th>real_age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>000000.jpg</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>000001.jpg</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>000002.jpg</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>000003.jpg</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>000004.jpg</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1973</th>
+      <td>007608.jpg</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>1974</th>
+      <td>007609.jpg</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>1975</th>
+      <td>007610.jpg</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>1976</th>
+      <td>007611.jpg</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>1977</th>
+      <td>007612.jpg</td>
+      <td>47</td>
+    </tr>
+  </tbody>
+</table>
+<p>7591 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 7591 entries, 0 to 1977
+Data columns (total 2 columns):
+ #   Column     Non-Null Count  Dtype 
+---  ------     --------------  ----- 
+ 0   file_name  7591 non-null   object
+ 1   real_age   7591 non-null   int64 
+dtypes: int64(1), object(1)
+memory usage: 177.9+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are no gaps in the numbers themselves.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>real_age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>7591.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>31.201159</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>17.145060</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>20.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>29.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>41.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The mean is higher than the median, indicating that the dataset is skewed positively.
+No abnormal values are observed.</p>
+</section>
+<section id="data-distribution">
+<h3>Data distribution<a class="headerlink" href="#data-distribution" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;real_age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Age distribution&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6b4b8910c807b2a2936c8da6cc469390b7f107e56f90fd203906261145093605.png" src="_images/6b4b8910c807b2a2936c8da6cc469390b7f107e56f90fd203906261145093605.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;real_age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30    317
+25    315
+27    229
+26    226
+28    217
+Name: real_age, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are significantly more photos with young people than photos with older or younger people.</p>
+<p>Quite a lot of photos with babies. But there are not so much pictures of elderly people.
+This is unfortunate, because pensioners are more likely to be seen at the cash register than infants.</p>
+<p>If we were to distinguish age groups, we would need to account for class imbalance. This is unlikely to be the case in the regression task, although we could add more augmentations for pictures with elderly people.</p>
+<p>Let’s try to estimate the amount of data by age group.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;real_age&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span><span class="p">,</span> <span class="n">fig</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">])))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Age distribution by group&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/755b56442302bd479149715b9f86961d4a73e000006b9324099ed0d666e8d3d5.png" src="_images/755b56442302bd479149715b9f86961d4a73e000006b9324099ed0d666e8d3d5.png" />
+</div>
+</div>
+<p>For older age groups, there is clearly insufficient data amount.</p>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">columns</span> <span class="o">*</span> <span class="n">rows</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">train_gen_flow</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">train_gen_flow</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/7910a93b84c1110c5629ffd1f99043136385b8bc7a888ccc746d24eaf664f0b9.png" src="_images/7910a93b84c1110c5629ffd1f99043136385b8bc7a888ccc746d24eaf664f0b9.png" />
+</div>
+</div>
+</section>
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Training will be conducted on 7591 photographs. Of these, 25% will be taken for the validation sample.</p></li>
+<li><p>Most of the photos are color, with 3 channels. They have all been compressed to 224 by 224 pixels.</p></li>
+<li><p>The distribution is not normal, although it resembles it (centered around age 25). There are a large number of photographs of infants. And even more photos of people 25 and 30 years old.</p></li>
+<li><p>On the contrary, there are few photos of older people. This age imbalance may affect the training procedure. If evaluated by age groups, the data are sufficient.</p></li>
+<li><p>The labelling of the photos is correct.</p></li>
+</ol>
+</section>
+</section>
+<section id="model-training">
+<h2>Model training<a class="headerlink" href="#model-training" title="Link to this heading">#</a></h2>
+<p>Recommendations for training are as follows:</p>
+<ul class="simple">
+<li><p>The loss function does not necessarily have to be MAE. Often neural networks with MSE loss function are trained faster.</p></li>
+<li><p>If the quality on the validation sample improves, but the model overtrains more and more, it is not necessary to change the model. Usually neural networks with a large number of layers overtrain strongly.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports for GPU simulator</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">import numpy as np</span>
+<span class="sd">import pandas as pd</span>
+<span class="sd">import matplotlib.pyplot as plt</span>
+
+<span class="sd">from tensorflow.keras.optimizers import Adam</span>
+<span class="sd">from tensorflow.keras.models import Sequential</span>
+<span class="sd">from tensorflow.keras.applications.resnet import ResNet50</span>
+<span class="sd">from tensorflow.keras.layers import GlobalAveragePooling2D, Dense</span>
+<span class="sd">from tensorflow.keras.preprocessing.image import ImageDataGenerator</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">def</span> <span class="nf">load_train</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;labels.csv&#39;</span><span class="p">)</span>
+    
+    <span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+        <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
+        <span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span> 
+        <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> 
+        <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    
+    <span class="n">train_data</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow_from_dataframe</span><span class="p">(</span>
+        <span class="n">dataframe</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> 
+        <span class="n">directory</span><span class="o">=</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;/final_files&#39;</span><span class="p">,</span>
+        <span class="n">x_col</span><span class="o">=</span><span class="s1">&#39;file_name&#39;</span><span class="p">,</span>
+        <span class="n">y_col</span><span class="o">=</span><span class="s1">&#39;real_age&#39;</span><span class="p">,</span>
+        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> 
+        <span class="n">subset</span><span class="o">=</span><span class="s1">&#39;training&#39;</span><span class="p">,</span> 
+        <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="mi">12345</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">train_data</span>
+
+
+<span class="k">def</span> <span class="nf">load_test</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;labels.csv&#39;</span><span class="p">)</span>
+    
+    <span class="n">test_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+        <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
+        <span class="n">rescale</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mf">255.</span><span class="p">)</span>
+    
+    <span class="n">test_data</span> <span class="o">=</span> <span class="n">test_datagen</span><span class="o">.</span><span class="n">flow_from_dataframe</span><span class="p">(</span>
+        <span class="n">dataframe</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> 
+        <span class="n">directory</span><span class="o">=</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;/final_files&#39;</span><span class="p">,</span>
+        <span class="n">x_col</span><span class="o">=</span><span class="s1">&#39;file_name&#39;</span><span class="p">,</span>
+        <span class="n">y_col</span><span class="o">=</span><span class="s1">&#39;real_age&#39;</span><span class="p">,</span>
+        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">),</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> 
+        <span class="n">subset</span><span class="o">=</span><span class="s1">&#39;validation&#39;</span><span class="p">,</span> 
+        <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="mi">12345</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">test_data</span>
+
+
+<span class="k">def</span> <span class="nf">create_model</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+    <span class="n">backbone</span> <span class="o">=</span> <span class="n">ResNet50</span><span class="p">(</span>
+        <span class="n">input_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">,</span> 
+        <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;/datasets/keras_models/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5&#39;</span><span class="p">,</span> 
+        <span class="n">include_top</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">backbone</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">GlobalAveragePooling2D</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span> 
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">),</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mae&#39;</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">model</span>
+
+
+<span class="k">def</span> <span class="nf">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">train_data</span><span class="p">,</span> <span class="n">test_data</span><span class="p">,</span> 
+                <span class="n">batch_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                <span class="n">steps_per_epoch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validation_steps</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span>
+              <span class="n">validation_data</span><span class="o">=</span><span class="n">test_data</span><span class="p">,</span>
+              <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span>
+              <span class="n">steps_per_epoch</span><span class="o">=</span><span class="n">steps_per_epoch</span><span class="p">,</span>
+              <span class="n">validation_steps</span><span class="o">=</span><span class="n">validation_steps</span><span class="p">,</span>
+              <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the GPU simulator, the following result was obtained on these functions:</p>
+</section>
+<section id="results">
+<h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
+<p>The testing threshold of MAE &lt; 8 is passed (even by a small margin).</p>
+<p>On the other hand, we see that the model is overtrained: validation on the training sample gives <code class="docutils literal notranslate"><span class="pre">MAE=</span> <span class="pre">5.2295</span></code>, while in testing the model shows <code class="docutils literal notranslate"><span class="pre">MAE=</span> <span class="pre">6.3274</span></code>.
+This corresponds to about the third epoch of training (out of five conducted).</p>
+</section>
+<section id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>The data is a set of 7591 color photos (and a small number of black and white photos).</p></li>
+<li><p>The photos are of different sizes, but for training they were compressed to the same size of 224 by 224 pixels.</p></li>
+<li><p>There is a significant age imbalance in the data: there are noticeably more young people (18 to 30) than other age groups. There are also many pictures of infants. If we group the data by age groups, there are enough photos for training.</p></li>
+<li><p>For the training, was used a convolutional network ResNet50, which used pre-selected weights as input values.</p></li>
+<li><p>Augmentations were used in training: reflections of photos horizontally and shifts of 20% of pixels vertically and horizontally.</p></li>
+<li><p>The model was trained on 5 epochs, that is, it adjusted the coefficients in the fully connected layer to the transformed photographs (loss function - MSE) 5 times. This resulted in overtraining. Thus, the MAE was <code class="docutils literal notranslate"><span class="pre">11.13</span></code> at the first epoch and <code class="docutils literal notranslate"><span class="pre">5.23</span></code> at the fifth epoch. The error on the test sample was <code class="docutils literal notranslate"><span class="pre">6.33</span></code>, which corresponds to about the third epoch of training.</p></li>
+<li><p>Optimization was performed by the Adam algorithm with a learning rate equal to 0.0001. During each epoch it was carried out in 178 steps, at 60 of which there was validation.</p></li>
+<li><p>The trained model can determine the age of customers with an average error of at least 6 years (in practice it can be more). In this regard, this model can be used to analyze purchases and proposals of goods.</p></li>
+<li><p>However, it cannot be used to control the integrity of cashiers when selling alcohol: it is not accurate enough.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="text_classification.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Classification of comments</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="regression_metallurgy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Steel temperature prediction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis">Exploratory data analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-size">Sample size</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-distribution">Data distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">Model training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Leonid Dybovskii
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
