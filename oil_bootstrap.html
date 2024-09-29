@@ -1,0 +1,2978 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Selection of a location for a well &#8212; Data Science course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'oil_bootstrap';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Gold recovery" href="gold_recovery.html" />
+    <link rel="prev" title="Customer churn" href="supervised_classification.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data Science course</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Data Science course
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="credit_scoring.html">Credit scoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_estate_market_analysis.html">Real estate market analysis in St. Petersburg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tariff_stats.html">Tariff statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer_games.html">Analysis of the computer games market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tariff_recommendation.html">Tariff recommendation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supervised_classification.html">Customer churn</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Selection of a location for a well</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gold_recovery.html">Gold recovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_transformation.html">Protection of customers’ personal data</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="cars_boosting.html">Cars cost determination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxi_time_series.html">Taxi orders prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text_classification.html">Classification of comments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer_vision.html">Age prediction by photo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression_metallurgy.html">Steel temperature prediction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/oil_bootstrap.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Selection of a location for a well</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">Data preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values">Missing values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duplicates">Duplicates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normality">Normality</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms-for-generation">Histograms for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plot-for-generation">QQ-plot for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#shapiro-wilk-test-for-generation">Shapiro-Wilk test for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kolmogorov-smirnov-test-for-generation">Kolmogorov-Smirnov test for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anderson-darling-test-for-generation">Anderson-Darling test for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram-for-data">Histogram for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plot-for-data">QQ-plot for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#shapiro-wilk-test-for-data">Shapiro-Wilk test for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kolmogorov-smirnov-test-for-data">Kolmogorov-Smirnov test for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anderson-darling-test-for-data">Anderson-Darling test for data</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling">Scaling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samples">Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training">Training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profit-calculation">Profit calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profitability-assessment">Profitability assessment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-mean-values">Comparison of mean values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-interval">Confidence interval</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-of-loss">Risk of loss</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="selection-of-a-location-for-a-well">
+<h1>Selection of a location for a well<a class="headerlink" href="#selection-of-a-location-for-a-well" title="Link to this heading">#</a></h1>
+<p>The task is to determine the location for a new oil well.</p>
+<p>The selection usually consists of the following steps:</p>
+<ol class="arabic simple">
+<li><p>Gathering characteristics for wells in the selected region: estimating oil quality and reserve volumes</p></li>
+<li><p>Building models to predict the amount of reserves in new wells</p></li>
+<li><p>Selecting the wells with the highest value estimates</p></li>
+<li><p>Identification of the region with the maximum total profit of the selected wells</p></li>
+</ol>
+<p>In our case, we have synthetic data on three oil regions. For each of them 100 000 points with known characteristics and oil volume (in thousands of barrels) are selected. It is required to select the most promising region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">zscore</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">lognorm</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">shapiro</span><span class="p">,</span> <span class="n">kstest</span><span class="p">,</span> <span class="n">anderson</span>
+<span class="c1"># from scipy.stats import normaltest, kurtosis, skew</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="c1"># from sklearn.preprocessing import normalize, MinMaxScaler, Normalizer</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span> <span class="k">as</span> <span class="n">mse</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span> <span class="k">as</span> <span class="n">mae</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="data-preprocessing">
+<h2>Data preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">geo_data_0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;geo_data_0.csv&#39;</span><span class="p">)</span>
+    <span class="n">geo_data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;geo_data_1.csv&#39;</span><span class="p">)</span>
+    <span class="n">geo_data_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;geo_data_2.csv&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">geo_data_0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/geo_data_0.csv&#39;</span><span class="p">)</span>
+    <span class="n">geo_data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/geo_data_1.csv&#39;</span><span class="p">)</span>
+    <span class="n">geo_data_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/datasets/geo_data_2.csv&#39;</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data_0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>txEyH</td>
+      <td>0.705745</td>
+      <td>-0.497823</td>
+      <td>1.221170</td>
+      <td>105.280062</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2acmU</td>
+      <td>1.334711</td>
+      <td>-0.340164</td>
+      <td>4.365080</td>
+      <td>73.037750</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>409Wp</td>
+      <td>1.022732</td>
+      <td>0.151990</td>
+      <td>1.419926</td>
+      <td>85.265647</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>iJLyR</td>
+      <td>-0.032172</td>
+      <td>0.139033</td>
+      <td>2.978566</td>
+      <td>168.620776</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Xdl7t</td>
+      <td>1.988431</td>
+      <td>0.155413</td>
+      <td>4.751769</td>
+      <td>154.036647</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>99995</th>
+      <td>DLsed</td>
+      <td>0.971957</td>
+      <td>0.370953</td>
+      <td>6.075346</td>
+      <td>110.744026</td>
+    </tr>
+    <tr>
+      <th>99996</th>
+      <td>QKivN</td>
+      <td>1.392429</td>
+      <td>-0.382606</td>
+      <td>1.273912</td>
+      <td>122.346843</td>
+    </tr>
+    <tr>
+      <th>99997</th>
+      <td>3rnvd</td>
+      <td>1.029585</td>
+      <td>0.018787</td>
+      <td>-1.348308</td>
+      <td>64.375443</td>
+    </tr>
+    <tr>
+      <th>99998</th>
+      <td>7kl59</td>
+      <td>0.998163</td>
+      <td>-0.528582</td>
+      <td>1.583869</td>
+      <td>74.040764</td>
+    </tr>
+    <tr>
+      <th>99999</th>
+      <td>1CWhH</td>
+      <td>1.764754</td>
+      <td>-0.266417</td>
+      <td>5.722849</td>
+      <td>149.633246</td>
+    </tr>
+  </tbody>
+</table>
+<p>100000 rows × 5 columns</p>
+</div></div></div>
+</div>
+<section id="missing-values">
+<h3>Missing values<a class="headerlink" href="#missing-values" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">geo_data_0</span><span class="p">,</span> <span class="n">geo_data_1</span><span class="p">,</span> <span class="n">geo_data_2</span><span class="p">])</span>
+<span class="n">all_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 300000 entries, 0 to 99999
+Data columns (total 5 columns):
+ #   Column   Non-Null Count   Dtype  
+---  ------   --------------   -----  
+ 0   id       300000 non-null  object 
+ 1   f0       300000 non-null  float64
+ 2   f1       300000 non-null  float64
+ 3   f2       300000 non-null  float64
+ 4   product  300000 non-null  float64
+dtypes: float64(4), object(1)
+memory usage: 13.7+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looks like there’s no skips.</p>
+</section>
+<section id="duplicates">
+<h3>Duplicates<a class="headerlink" href="#duplicates" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>299951
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are a few repeats, though.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7530</th>
+      <td>HZww2</td>
+      <td>1.061194</td>
+      <td>-0.373969</td>
+      <td>10.430210</td>
+      <td>158.828695</td>
+    </tr>
+    <tr>
+      <th>41724</th>
+      <td>bxg6G</td>
+      <td>-0.823752</td>
+      <td>0.546319</td>
+      <td>3.630479</td>
+      <td>93.007798</td>
+    </tr>
+    <tr>
+      <th>51970</th>
+      <td>A5aEY</td>
+      <td>-0.180335</td>
+      <td>0.935548</td>
+      <td>-2.094773</td>
+      <td>33.020205</td>
+    </tr>
+    <tr>
+      <th>63593</th>
+      <td>QcMuo</td>
+      <td>0.635635</td>
+      <td>-0.473422</td>
+      <td>0.862670</td>
+      <td>64.578675</td>
+    </tr>
+    <tr>
+      <th>66136</th>
+      <td>74z30</td>
+      <td>1.084962</td>
+      <td>-0.312358</td>
+      <td>6.990771</td>
+      <td>127.643327</td>
+    </tr>
+    <tr>
+      <th>69163</th>
+      <td>AGS9W</td>
+      <td>-0.933795</td>
+      <td>0.116194</td>
+      <td>-3.655896</td>
+      <td>19.230453</td>
+    </tr>
+    <tr>
+      <th>75715</th>
+      <td>Tdehs</td>
+      <td>0.112079</td>
+      <td>0.430296</td>
+      <td>3.218993</td>
+      <td>60.964018</td>
+    </tr>
+    <tr>
+      <th>90815</th>
+      <td>fiKDv</td>
+      <td>0.049883</td>
+      <td>0.841313</td>
+      <td>6.394613</td>
+      <td>137.346586</td>
+    </tr>
+    <tr>
+      <th>92341</th>
+      <td>TtcGQ</td>
+      <td>0.110711</td>
+      <td>1.022689</td>
+      <td>0.911381</td>
+      <td>101.318008</td>
+    </tr>
+    <tr>
+      <th>97785</th>
+      <td>bsk9y</td>
+      <td>0.378429</td>
+      <td>0.005837</td>
+      <td>0.160827</td>
+      <td>160.637302</td>
+    </tr>
+    <tr>
+      <th>23086</th>
+      <td>CXJ2r</td>
+      <td>4.595329</td>
+      <td>-1.967882</td>
+      <td>4.000767</td>
+      <td>107.813044</td>
+    </tr>
+    <tr>
+      <th>41906</th>
+      <td>LHZR0</td>
+      <td>-8.989672</td>
+      <td>-4.286607</td>
+      <td>2.009139</td>
+      <td>57.085625</td>
+    </tr>
+    <tr>
+      <th>46293</th>
+      <td>pGQRI</td>
+      <td>-5.171681</td>
+      <td>-0.546409</td>
+      <td>3.002864</td>
+      <td>84.038886</td>
+    </tr>
+    <tr>
+      <th>47203</th>
+      <td>gnA83</td>
+      <td>13.842436</td>
+      <td>-12.362831</td>
+      <td>4.003258</td>
+      <td>107.813044</td>
+    </tr>
+    <tr>
+      <th>75179</th>
+      <td>mpZhE</td>
+      <td>11.206881</td>
+      <td>-2.291883</td>
+      <td>1.003807</td>
+      <td>26.953261</td>
+    </tr>
+    <tr>
+      <th>76544</th>
+      <td>L1Fdm</td>
+      <td>-3.346138</td>
+      <td>1.878476</td>
+      <td>0.004355</td>
+      <td>3.179103</td>
+    </tr>
+    <tr>
+      <th>81779</th>
+      <td>it2OW</td>
+      <td>-7.472182</td>
+      <td>-14.802085</td>
+      <td>4.005783</td>
+      <td>110.992147</td>
+    </tr>
+    <tr>
+      <th>82178</th>
+      <td>bfPNe</td>
+      <td>-6.202799</td>
+      <td>-4.820045</td>
+      <td>2.995107</td>
+      <td>84.038886</td>
+    </tr>
+    <tr>
+      <th>82873</th>
+      <td>wt4Uk</td>
+      <td>10.259972</td>
+      <td>-9.376355</td>
+      <td>4.994297</td>
+      <td>134.766305</td>
+    </tr>
+    <tr>
+      <th>84461</th>
+      <td>5ltQ6</td>
+      <td>18.213839</td>
+      <td>2.191999</td>
+      <td>3.993869</td>
+      <td>107.813044</td>
+    </tr>
+    <tr>
+      <th>94352</th>
+      <td>Q64YW</td>
+      <td>3.005548</td>
+      <td>-0.243063</td>
+      <td>5.000265</td>
+      <td>134.766305</td>
+    </tr>
+    <tr>
+      <th>97856</th>
+      <td>Y2udP</td>
+      <td>12.544203</td>
+      <td>5.897907</td>
+      <td>1.007743</td>
+      <td>26.953261</td>
+    </tr>
+    <tr>
+      <th>99665</th>
+      <td>g3RRG</td>
+      <td>5.884971</td>
+      <td>-3.853958</td>
+      <td>5.000735</td>
+      <td>134.766305</td>
+    </tr>
+    <tr>
+      <th>99975</th>
+      <td>Mp3uM</td>
+      <td>6.109864</td>
+      <td>-6.680806</td>
+      <td>4.995256</td>
+      <td>134.766305</td>
+    </tr>
+    <tr>
+      <th>7260</th>
+      <td>uSye4</td>
+      <td>-0.066172</td>
+      <td>2.543996</td>
+      <td>-0.054049</td>
+      <td>141.345070</td>
+    </tr>
+    <tr>
+      <th>9042</th>
+      <td>LhkAh</td>
+      <td>-1.011388</td>
+      <td>-1.422994</td>
+      <td>0.167327</td>
+      <td>97.289509</td>
+    </tr>
+    <tr>
+      <th>13672</th>
+      <td>i2csb</td>
+      <td>0.395736</td>
+      <td>-1.039466</td>
+      <td>3.262824</td>
+      <td>136.079194</td>
+    </tr>
+    <tr>
+      <th>17007</th>
+      <td>g2I86</td>
+      <td>-1.616730</td>
+      <td>1.110380</td>
+      <td>4.226968</td>
+      <td>107.940639</td>
+    </tr>
+    <tr>
+      <th>17551</th>
+      <td>TXPOv</td>
+      <td>-1.714714</td>
+      <td>0.545975</td>
+      <td>6.907380</td>
+      <td>109.685043</td>
+    </tr>
+    <tr>
+      <th>27380</th>
+      <td>2tyMi</td>
+      <td>-1.789602</td>
+      <td>-1.359044</td>
+      <td>-4.840745</td>
+      <td>145.901447</td>
+    </tr>
+    <tr>
+      <th>27885</th>
+      <td>wqgPo</td>
+      <td>0.052461</td>
+      <td>1.424025</td>
+      <td>0.085541</td>
+      <td>10.686576</td>
+    </tr>
+    <tr>
+      <th>31306</th>
+      <td>H2jd8</td>
+      <td>-0.882244</td>
+      <td>0.102113</td>
+      <td>5.132965</td>
+      <td>97.736331</td>
+    </tr>
+    <tr>
+      <th>40478</th>
+      <td>uMqiK</td>
+      <td>-1.772509</td>
+      <td>0.152085</td>
+      <td>-0.422541</td>
+      <td>119.682928</td>
+    </tr>
+    <tr>
+      <th>43233</th>
+      <td>xCHr8</td>
+      <td>-0.847066</td>
+      <td>2.101796</td>
+      <td>5.597130</td>
+      <td>184.388641</td>
+    </tr>
+    <tr>
+      <th>48472</th>
+      <td>scFN4</td>
+      <td>2.198203</td>
+      <td>0.733283</td>
+      <td>10.562272</td>
+      <td>153.719681</td>
+    </tr>
+    <tr>
+      <th>49106</th>
+      <td>lFHA5</td>
+      <td>1.143130</td>
+      <td>1.528147</td>
+      <td>2.717799</td>
+      <td>84.144358</td>
+    </tr>
+    <tr>
+      <th>49564</th>
+      <td>VF7Jo</td>
+      <td>-0.883115</td>
+      <td>0.560537</td>
+      <td>0.723601</td>
+      <td>136.233420</td>
+    </tr>
+    <tr>
+      <th>50308</th>
+      <td>rAJA6</td>
+      <td>1.426039</td>
+      <td>1.262731</td>
+      <td>1.915009</td>
+      <td>80.927100</td>
+    </tr>
+    <tr>
+      <th>55967</th>
+      <td>KUPhW</td>
+      <td>1.211150</td>
+      <td>3.176408</td>
+      <td>5.543540</td>
+      <td>132.831802</td>
+    </tr>
+    <tr>
+      <th>57741</th>
+      <td>Suyut</td>
+      <td>0.730034</td>
+      <td>0.998910</td>
+      <td>0.673342</td>
+      <td>51.978338</td>
+    </tr>
+    <tr>
+      <th>61622</th>
+      <td>D8TNs</td>
+      <td>0.280382</td>
+      <td>0.061393</td>
+      <td>4.887870</td>
+      <td>114.943876</td>
+    </tr>
+    <tr>
+      <th>72896</th>
+      <td>5ssQt</td>
+      <td>-0.651825</td>
+      <td>0.782415</td>
+      <td>2.690636</td>
+      <td>120.108761</td>
+    </tr>
+    <tr>
+      <th>79311</th>
+      <td>kpKGs</td>
+      <td>0.391595</td>
+      <td>0.520890</td>
+      <td>0.935081</td>
+      <td>91.558464</td>
+    </tr>
+    <tr>
+      <th>80750</th>
+      <td>TAqwC</td>
+      <td>-0.176382</td>
+      <td>-0.503558</td>
+      <td>1.877303</td>
+      <td>38.618695</td>
+    </tr>
+    <tr>
+      <th>82577</th>
+      <td>eVdPR</td>
+      <td>-3.325910</td>
+      <td>0.212653</td>
+      <td>-2.172340</td>
+      <td>61.323206</td>
+    </tr>
+    <tr>
+      <th>87965</th>
+      <td>tgOl6</td>
+      <td>-6.077439</td>
+      <td>-1.366449</td>
+      <td>1.858951</td>
+      <td>153.001240</td>
+    </tr>
+    <tr>
+      <th>91259</th>
+      <td>G6k8A</td>
+      <td>3.021943</td>
+      <td>2.091350</td>
+      <td>2.325737</td>
+      <td>81.922702</td>
+    </tr>
+    <tr>
+      <th>95090</th>
+      <td>Vcm5J</td>
+      <td>2.587702</td>
+      <td>1.986875</td>
+      <td>2.482245</td>
+      <td>92.327572</td>
+    </tr>
+    <tr>
+      <th>97706</th>
+      <td>PyNp5</td>
+      <td>-1.248973</td>
+      <td>-1.246669</td>
+      <td>-0.538638</td>
+      <td>122.021857</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;HZww2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>931</th>
+      <td>HZww2</td>
+      <td>0.755284</td>
+      <td>0.368511</td>
+      <td>1.863211</td>
+      <td>30.681774</td>
+    </tr>
+    <tr>
+      <th>7530</th>
+      <td>HZww2</td>
+      <td>1.061194</td>
+      <td>-0.373969</td>
+      <td>10.430210</td>
+      <td>158.828695</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Strange case. The working hypothesis is that the identifiers were generated for the three tables separately, so they are repeated in different dataframes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data_0</span><span class="p">[</span><span class="n">geo_data_0</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7530</th>
+      <td>HZww2</td>
+      <td>1.061194</td>
+      <td>-0.373969</td>
+      <td>10.430210</td>
+      <td>158.828695</td>
+    </tr>
+    <tr>
+      <th>41724</th>
+      <td>bxg6G</td>
+      <td>-0.823752</td>
+      <td>0.546319</td>
+      <td>3.630479</td>
+      <td>93.007798</td>
+    </tr>
+    <tr>
+      <th>51970</th>
+      <td>A5aEY</td>
+      <td>-0.180335</td>
+      <td>0.935548</td>
+      <td>-2.094773</td>
+      <td>33.020205</td>
+    </tr>
+    <tr>
+      <th>63593</th>
+      <td>QcMuo</td>
+      <td>0.635635</td>
+      <td>-0.473422</td>
+      <td>0.862670</td>
+      <td>64.578675</td>
+    </tr>
+    <tr>
+      <th>66136</th>
+      <td>74z30</td>
+      <td>1.084962</td>
+      <td>-0.312358</td>
+      <td>6.990771</td>
+      <td>127.643327</td>
+    </tr>
+    <tr>
+      <th>69163</th>
+      <td>AGS9W</td>
+      <td>-0.933795</td>
+      <td>0.116194</td>
+      <td>-3.655896</td>
+      <td>19.230453</td>
+    </tr>
+    <tr>
+      <th>75715</th>
+      <td>Tdehs</td>
+      <td>0.112079</td>
+      <td>0.430296</td>
+      <td>3.218993</td>
+      <td>60.964018</td>
+    </tr>
+    <tr>
+      <th>90815</th>
+      <td>fiKDv</td>
+      <td>0.049883</td>
+      <td>0.841313</td>
+      <td>6.394613</td>
+      <td>137.346586</td>
+    </tr>
+    <tr>
+      <th>92341</th>
+      <td>TtcGQ</td>
+      <td>0.110711</td>
+      <td>1.022689</td>
+      <td>0.911381</td>
+      <td>101.318008</td>
+    </tr>
+    <tr>
+      <th>97785</th>
+      <td>bsk9y</td>
+      <td>0.378429</td>
+      <td>0.005837</td>
+      <td>0.160827</td>
+      <td>160.637302</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data_0</span><span class="p">[</span><span class="n">geo_data_0</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;HZww2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>931</th>
+      <td>HZww2</td>
+      <td>0.755284</td>
+      <td>0.368511</td>
+      <td>1.863211</td>
+      <td>30.681774</td>
+    </tr>
+    <tr>
+      <th>7530</th>
+      <td>HZww2</td>
+      <td>1.061194</td>
+      <td>-0.373969</td>
+      <td>10.430210</td>
+      <td>158.828695</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>However, no. Even within a single data set, identifiers do not fulfill their function.</p>
+<p>Since there is no indication by which one of them can be discarded, we leave the repetitions in the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">geo_data_0</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;flare&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">geo_data_0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c114deaf828acf7833ed137b0253ebf22337a73acabe284127dc16c2b32159f4.png" src="_images/c114deaf828acf7833ed137b0253ebf22337a73acabe284127dc16c2b32159f4.png" />
+<img alt="_images/0993a00cd980be98f0d22c9df6ad74be67f75cbea2cfb1e9ccc11bfbe250cbf3.png" src="_images/0993a00cd980be98f0d22c9df6ad74be67f75cbea2cfb1e9ccc11bfbe250cbf3.png" />
+</div>
+</div>
+<p>Some correlation can be traced only between f2 and product. But it is not high and we need both columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">geo_data_1</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;flare&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">geo_data_1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/11838bc9027dedbbb1f8a6aa501d3f856020ccc0c30838fd0418ee656a38370b.png" src="_images/11838bc9027dedbbb1f8a6aa501d3f856020ccc0c30838fd0418ee656a38370b.png" />
+<img alt="_images/a9a01800c60bb88bb152be2d14e8b1253acee977d32e8d62b8ce86ffb072beb6.png" src="_images/a9a01800c60bb88bb152be2d14e8b1253acee977d32e8d62b8ce86ffb072beb6.png" />
+</div>
+</div>
+<p>We could remove the f2 column here, but linear regression seems to predict this region perfectly well as it is.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">geo_data_2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;flare&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">geo_data_2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b53d28204cd52eead360657677d0802d6b093e0f06f958fd94b297a2b16b66b3.png" src="_images/b53d28204cd52eead360657677d0802d6b093e0f06f958fd94b297a2b16b66b3.png" />
+<img alt="_images/4a88291e51838611ffaba7e06a774957a069129ba9c3956eb7cdff0b92b82c0c.png" src="_images/4a88291e51838611ffaba7e06a774957a069129ba9c3956eb7cdff0b92b82c0c.png" />
+</div>
+</div>
+<p>There’s also a correlation of 0.45 between f2 and product.</p>
+</section>
+<section id="normality">
+<h3>Normality<a class="headerlink" href="#normality" title="Link to this heading">#</a></h3>
+<p>Let’s check the normality of the data distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_data</span> <span class="o">=</span> <span class="n">geo_data_1</span><span class="p">[</span><span class="s1">&#39;f1&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample_data</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shapiro-Wilk test:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shapiro</span><span class="p">(</span><span class="n">sample_data</span><span class="p">));</span>
+<span class="k">if</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data may be from a normal distribution&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kolmogorov-Smirnov test:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kstest</span><span class="p">(</span><span class="n">sample_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">));</span>
+<span class="k">if</span> <span class="n">kstest</span><span class="p">(</span><span class="n">sample_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data may be from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f1
+Shapiro-Wilk test:
+ShapiroResult(statistic=0.9999602437019348, pvalue=0.2935238778591156)
+This data may be from a normal distribution
+
+Kolmogorov-Smirnov test:
+KstestResult(statistic=0.6853550799694432, pvalue=0.0)
+This data is not from a normal distribution
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/leonid/anaconda3/envs/practicum/lib/python3.9/site-packages/scipy/stats/_morestats.py:1761: UserWarning: p-value may not be accurate for N &gt; 5000.
+  warnings.warn(&quot;p-value may not be accurate for N &gt; 5000.&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We first check them for the generated distributions:</p>
+<section id="histograms-for-generation">
+<h4>Histograms for generation<a class="headerlink" href="#histograms-for-generation" title="Link to this heading">#</a></h4>
+<p>Normal distribution</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">57</span><span class="p">)</span> <span class="c1"># operates in a single cell</span>
+
+<span class="c1"># norm_data = np.random.normal(size=1000)</span>
+<span class="n">norm_data</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="c1"># mean 0, standard deviation 1</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">norm_data</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/25eaf7059ce78b7eb5cbe0e3bf4b720a97307ef3722889690a3ebbb6e3166b18.png" src="_images/25eaf7059ce78b7eb5cbe0e3bf4b720a97307ef3722889690a3ebbb6e3166b18.png" />
+</div>
+</div>
+<p>Lognormal distribution, i.e. <span class="math notranslate nohighlight">\(X = e^Y\)</span>, where <span class="math notranslate nohighlight">\(Y\)</span> is a normally distributed random variable:</p>
+<p><span class="math notranslate nohighlight">\(X \backsim  LogN(\mu, \sigma^2) \rightarrow Y = \ln(X) \backsim N(\mu, \sigma^2)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">57</span><span class="p">)</span>
+
+<span class="c1"># lognorm_data = np.random.lognormal(size=1000)</span>
+<span class="n">lognorm_data</span> <span class="o">=</span> <span class="n">lognorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="c1"># mean 1, standard deviation 0.5</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">lognorm_data</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6cfedfa5e2d11f847be9211cb57341e94c3726d1476fb1bc1b25dda9e3f0e2f4.png" src="_images/6cfedfa5e2d11f847be9211cb57341e94c3726d1476fb1bc1b25dda9e3f0e2f4.png" />
+</div>
+</div>
+</section>
+<section id="qq-plot-for-generation">
+<h4>QQ-plot for generation<a class="headerlink" href="#qq-plot-for-generation" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">norm_data</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="s1">&#39;45&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6d41394943f539fd5807b702befc771b7078fe20afd9fd882c5b457edd5540dc.png" src="_images/6d41394943f539fd5807b702befc771b7078fe20afd9fd882c5b457edd5540dc.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">lognorm_data</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="s1">&#39;45&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0c60134ecb1b4fea0abcf666f778ebe6e728cda9ea0d454596d20a2a75e87470.png" src="_images/0c60134ecb1b4fea0abcf666f778ebe6e728cda9ea0d454596d20a2a75e87470.png" />
+</div>
+</div>
+</section>
+<section id="shapiro-wilk-test-for-generation">
+<h4>Shapiro-Wilk test for generation<a class="headerlink" href="#shapiro-wilk-test-for-generation" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(H_0\)</span>: data from a normal distribution<br>
+<span class="math notranslate nohighlight">\(H_1\)</span>: data not from a normal distribution</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Normal data&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-value:&#39;</span><span class="p">,</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">norm_data</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">norm_data</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Normal data
+p-value: 0.030226966366171837
+This data is not from a normal distribution
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lognormal data&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-value:&#39;</span><span class="p">,</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">lognorm_data</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">lognorm_data</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lognormal data
+p-value: 9.582553031076134e-28
+This data is not from a normal distribution
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, the test was wrong (if generated correctly). The sample size is sufficient and the threshold is the most common. On the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html">test page</a> it is writtent that it makes a type I mistake (i.e. ours) with a 5% probability.</p>
+</section>
+<section id="kolmogorov-smirnov-test-for-generation">
+<h4>Kolmogorov-Smirnov test for generation<a class="headerlink" href="#kolmogorov-smirnov-test-for-generation" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(H_0\)</span>: data from the selected distribution<br>
+<span class="math notranslate nohighlight">\(H_1\)</span>: data not from a selected distribution</p>
+<p>With <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks_2samp.html">this test</a> it is also possible to test the hypothesis that the two samples are drawn from the same distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Normal data&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-value:&#39;</span><span class="p">,</span> <span class="n">kstest</span><span class="p">(</span><span class="n">norm_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">kstest</span><span class="p">(</span><span class="n">norm_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Normal data
+p-value: 0.1006234841319138
+This data is from a normal distribution
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lognormal data&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-value:&#39;</span><span class="p">,</span> <span class="n">kstest</span><span class="p">(</span><span class="n">lognorm_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">kstest</span><span class="p">(</span><span class="n">lognorm_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lognormal data
+p-value: 0.0
+This data is not from a normal distribution
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="anderson-darling-test-for-generation">
+<h4>Anderson-Darling test for generation<a class="headerlink" href="#anderson-darling-test-for-generation" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(H_0\)</span>: the data follow a normal distribution<br>
+<span class="math notranslate nohighlight">\(H_1\)</span>: the data do not follow a normal distribution</p>
+<p>If the test statistic is above the critical value, we reject the null hypothesis (the data are not normally distributed).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Normal data&#39;</span><span class="p">)</span>
+<span class="n">anderson_result</span> <span class="o">=</span> <span class="n">anderson</span><span class="p">(</span><span class="n">norm_data</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">statistic</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">anderson_result</span><span class="o">.</span><span class="n">statistic</span> <span class="o">&lt;</span> <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">%:, </span><span class="si">{}</span><span class="s1">, failed to reject H0&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">significance_level</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> 
+                                                     <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">%:, </span><span class="si">{}</span><span class="s1">, reject H0&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">significance_level</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> 
+                                           <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Normal data
+0.7547887835079337
+15.0%:, 0.574, reject H0
+10.0%:, 0.653, reject H0
+5.0%:, 0.784, failed to reject H0
+2.5%:, 0.914, failed to reject H0
+1.0%:, 1.088, failed to reject H0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lognormal data&#39;</span><span class="p">)</span>
+<span class="n">anderson_result</span> <span class="o">=</span> <span class="n">anderson</span><span class="p">(</span><span class="n">lognorm_data</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">statistic</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">anderson_result</span><span class="o">.</span><span class="n">statistic</span> <span class="o">&lt;</span> <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">%:, </span><span class="si">{}</span><span class="s1">, failed to reject H0&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">significance_level</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> 
+                                                     <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">%:, </span><span class="si">{}</span><span class="s1">, reject H0&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">significance_level</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> 
+                                           <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>      
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lognormal data
+32.65230347189299
+15.0%:, 0.574, reject H0
+10.0%:, 0.653, reject H0
+5.0%:, 0.784, reject H0
+2.5%:, 0.914, reject H0
+1.0%:, 1.088, reject H0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="histogram-for-data">
+<h4>Histogram for data<a class="headerlink" href="#histogram-for-data" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_data</span> <span class="o">=</span> <span class="n">geo_data_1</span><span class="p">[</span><span class="s1">&#39;f1&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample_data</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/629c769f81f99fed52edfe1f2fc073710ca1799d4c3d0e0d82792c007697deef.png" src="_images/629c769f81f99fed52edfe1f2fc073710ca1799d4c3d0e0d82792c007697deef.png" />
+</div>
+</div>
+<p>Looks normal.</p>
+</section>
+<section id="qq-plot-for-data">
+<h4>QQ-plot for data<a class="headerlink" href="#qq-plot-for-data" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">sample_data</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="s1">&#39;45&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/920fab0570d59fc12d40d989b4c13073237e97255746853ff9b97bbbb27d9c48.png" src="_images/920fab0570d59fc12d40d989b4c13073237e97255746853ff9b97bbbb27d9c48.png" />
+</div>
+</div>
+<p>That’s probably because they’re not <a class="reference external" href="https://deepchecks.com/glossary/normalization-in-machine-learning/">standardized</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">sample_data</span><span class="p">),</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">);</span> <span class="c1"># standardization</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d49c6a6c6111ad004937b550743c3bb9987b8dc1c536d748f7433cb9ef974911.png" src="_images/d49c6a6c6111ad004937b550743c3bb9987b8dc1c536d748f7433cb9ef974911.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">sample_data</span><span class="p">),</span> <span class="n">line</span><span class="o">=</span><span class="s1">&#39;45&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d714866487f758c036b27330c02748ece3a08095de8c00c352875dc978b41a07.png" src="_images/d714866487f758c036b27330c02748ece3a08095de8c00c352875dc978b41a07.png" />
+</div>
+</div>
+</section>
+<section id="shapiro-wilk-test-for-data">
+<h4>Shapiro-Wilk test for data<a class="headerlink" href="#shapiro-wilk-test-for-data" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-value:&#39;</span><span class="p">,</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.2935238778591156
+This data is from a normal distribution
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="kolmogorov-smirnov-test-for-data">
+<h4>Kolmogorov-Smirnov test for data<a class="headerlink" href="#kolmogorov-smirnov-test-for-data" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-value:&#39;</span><span class="p">,</span> <span class="n">kstest</span><span class="p">(</span><span class="n">sample_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">kstest</span><span class="p">(</span><span class="n">sample_data</span><span class="p">,</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.0
+This data is not from a normal distribution
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data is really unlikely to be from <span class="math notranslate nohighlight">\(X \backsim N(0, 1)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-value:&#39;</span><span class="p">,</span> <span class="n">kstest</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">sample_data</span><span class="p">),</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">kstest</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">sample_data</span><span class="p">),</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is not from a normal distribution&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This data is from a normal distribution&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.6234450437006991
+This data is from a normal distribution
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="anderson-darling-test-for-data">
+<h4>Anderson-Darling test for data<a class="headerlink" href="#anderson-darling-test-for-data" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anderson_result</span> <span class="o">=</span> <span class="n">anderson</span><span class="p">(</span><span class="n">sample_data</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">statistic</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">anderson_result</span><span class="o">.</span><span class="n">statistic</span> <span class="o">&lt;</span> <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">%:, </span><span class="si">{}</span><span class="s1">, failed to reject H0&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">significance_level</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> 
+                                                     <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">%:, </span><span class="si">{}</span><span class="s1">, reject H0&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">significance_level</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> 
+                                           <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>      
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6486431970843114
+15.0%:, 0.576, reject H0
+10.0%:, 0.656, failed to reject H0
+5.0%:, 0.787, failed to reject H0
+2.5%:, 0.918, failed to reject H0
+1.0%:, 1.092, failed to reject H0
+</pre></div>
+</div>
+</div>
+</div>
+<p>It turns out the data are normally distributed but not standardized, so the tests diverged the first time. Nevertheless, the Shapiro-Wilk test was wrong.</p>
+</section>
+</section>
+<section id="scaling">
+<h3>Scaling<a class="headerlink" href="#scaling" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>300000.000000</td>
+      <td>300000.000000</td>
+      <td>300000.000000</td>
+      <td>300000.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.547913</td>
+      <td>-1.516172</td>
+      <td>2.497439</td>
+      <td>85.441667</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>5.316634</td>
+      <td>3.900220</td>
+      <td>2.916502</td>
+      <td>46.519494</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-31.609576</td>
+      <td>-26.358598</td>
+      <td>-12.088328</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>-1.003037</td>
+      <td>-2.478939</td>
+      <td>0.648213</td>
+      <td>52.666629</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.347934</td>
+      <td>-0.229632</td>
+      <td>2.491215</td>
+      <td>84.038886</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.755365</td>
+      <td>0.678562</td>
+      <td>4.344943</td>
+      <td>124.174086</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>29.421755</td>
+      <td>18.734063</td>
+      <td>16.739402</td>
+      <td>190.029838</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Apparently, the data are already scaled. In any case, there are no significant differences between the characteristics of the points (judging by the minima and maxima).</p>
+</section>
+</section>
+<section id="samples">
+<h2>Samples<a class="headerlink" href="#samples" title="Link to this heading">#</a></h2>
+<p>Since we only need the model for this data, there is no point in a test sample.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="n">geo_data_0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="n">geo_data_1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="n">geo_data_2</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+      <th>product</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>kBEdx</td>
+      <td>-15.001348</td>
+      <td>-8.276000</td>
+      <td>-0.005876</td>
+      <td>3.179103</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>62mP7</td>
+      <td>14.272088</td>
+      <td>-3.475083</td>
+      <td>0.999183</td>
+      <td>26.953261</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>vyE1P</td>
+      <td>6.263187</td>
+      <td>-5.948386</td>
+      <td>5.001160</td>
+      <td>134.766305</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KcrkZ</td>
+      <td>-13.081196</td>
+      <td>-11.506057</td>
+      <td>4.999415</td>
+      <td>137.945408</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AHL4O</td>
+      <td>12.702195</td>
+      <td>-8.147433</td>
+      <td>5.004363</td>
+      <td>134.766305</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>99995</th>
+      <td>QywKC</td>
+      <td>9.535637</td>
+      <td>-6.878139</td>
+      <td>1.998296</td>
+      <td>53.906522</td>
+    </tr>
+    <tr>
+      <th>99996</th>
+      <td>ptvty</td>
+      <td>-10.160631</td>
+      <td>-12.558096</td>
+      <td>5.005581</td>
+      <td>137.945408</td>
+    </tr>
+    <tr>
+      <th>99997</th>
+      <td>09gWa</td>
+      <td>-7.378891</td>
+      <td>-3.084104</td>
+      <td>4.998651</td>
+      <td>137.945408</td>
+    </tr>
+    <tr>
+      <th>99998</th>
+      <td>rqwUm</td>
+      <td>0.665714</td>
+      <td>-6.152593</td>
+      <td>1.000146</td>
+      <td>30.132364</td>
+    </tr>
+    <tr>
+      <th>99999</th>
+      <td>relB0</td>
+      <td>-3.426139</td>
+      <td>-7.794274</td>
+      <td>-0.003299</td>
+      <td>3.179103</td>
+    </tr>
+  </tbody>
+</table>
+<p>100000 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">features</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">geo_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;product&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># instead of id we will use the index</span>
+    <span class="n">target</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">geo_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;product&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.705745</td>
+      <td>-0.497823</td>
+      <td>1.221170</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.334711</td>
+      <td>-0.340164</td>
+      <td>4.365080</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.022732</td>
+      <td>0.151990</td>
+      <td>1.419926</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.032172</td>
+      <td>0.139033</td>
+      <td>2.978566</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.988431</td>
+      <td>0.155413</td>
+      <td>4.751769</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>99995</th>
+      <td>0.971957</td>
+      <td>0.370953</td>
+      <td>6.075346</td>
+    </tr>
+    <tr>
+      <th>99996</th>
+      <td>1.392429</td>
+      <td>-0.382606</td>
+      <td>1.273912</td>
+    </tr>
+    <tr>
+      <th>99997</th>
+      <td>1.029585</td>
+      <td>0.018787</td>
+      <td>-1.348308</td>
+    </tr>
+    <tr>
+      <th>99998</th>
+      <td>0.998163</td>
+      <td>-0.528582</td>
+      <td>1.583869</td>
+    </tr>
+    <tr>
+      <th>99999</th>
+      <td>1.764754</td>
+      <td>-0.266417</td>
+      <td>5.722849</td>
+    </tr>
+  </tbody>
+</table>
+<p>100000 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features_train</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">features_valid</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">target_train</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">target_valid</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">features_train</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">features_valid</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">target_train</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">target_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> \
+    <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">target</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">57</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features_train</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>f0</th>
+      <th>f1</th>
+      <th>f2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>97501</th>
+      <td>1.483372</td>
+      <td>-4.720276</td>
+      <td>3.002467</td>
+    </tr>
+    <tr>
+      <th>75725</th>
+      <td>-5.263973</td>
+      <td>-15.357834</td>
+      <td>0.992973</td>
+    </tr>
+    <tr>
+      <th>10748</th>
+      <td>1.697558</td>
+      <td>-9.747678</td>
+      <td>4.002124</td>
+    </tr>
+    <tr>
+      <th>45676</th>
+      <td>-6.765353</td>
+      <td>-5.839270</td>
+      <td>4.994510</td>
+    </tr>
+    <tr>
+      <th>46340</th>
+      <td>-11.272433</td>
+      <td>-0.184906</td>
+      <td>-0.002780</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>19064</th>
+      <td>-9.250584</td>
+      <td>-11.507806</td>
+      <td>1.003149</td>
+    </tr>
+    <tr>
+      <th>85071</th>
+      <td>-15.363442</td>
+      <td>-7.104400</td>
+      <td>1.993658</td>
+    </tr>
+    <tr>
+      <th>35845</th>
+      <td>7.207165</td>
+      <td>-0.017085</td>
+      <td>1.010123</td>
+    </tr>
+    <tr>
+      <th>11990</th>
+      <td>11.956859</td>
+      <td>-7.401173</td>
+      <td>4.996352</td>
+    </tr>
+    <tr>
+      <th>35791</th>
+      <td>-11.500666</td>
+      <td>-6.619275</td>
+      <td>3.990854</td>
+    </tr>
+  </tbody>
+</table>
+<p>75000 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_valid</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83880     66.355179
+72252     76.198012
+65978    154.412190
+85274    113.635346
+21258     90.557191
+            ...    
+4336      57.150975
+18981     83.608810
+11359     63.672303
+3786      83.237629
+17683    135.023129
+Name: product, Length: 25000, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="training">
+<h2>Training<a class="headerlink" href="#training" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions_valid</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features_train</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">target_train</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">predictions_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;product_pred&#39;</span><span class="p">)</span>
+    <span class="n">predictions_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">features_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions_valid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83880     72.552657
+72252    110.302530
+65978     71.880720
+85274    116.327736
+21258     95.033709
+            ...    
+4336     108.801470
+18981    116.449908
+11359     50.202244
+3786      80.456068
+17683     92.858526
+Name: product_pred, Length: 25000, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_valid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83880     71.033241
+72252    103.467670
+65978     86.288812
+85274     77.519493
+21258     55.661946
+            ...    
+4336     115.183790
+18981    137.774053
+11359     10.174574
+3786     105.811893
+17683     98.581907
+Name: product, Length: 25000, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Region:&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True mean:&#39;</span><span class="p">,</span> <span class="n">target_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Predicted mean:&#39;</span><span class="p">,</span> <span class="n">predictions_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;MAE:&#39;</span><span class="p">,</span> <span class="n">mae</span><span class="p">(</span><span class="n">target_valid</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">predictions_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RMSE:&#39;</span><span class="p">,</span> <span class="n">mse</span><span class="p">(</span><span class="n">target_valid</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">predictions_valid</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;R2:&#39;</span><span class="p">,</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">target_valid</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">predictions_valid</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Region: 0
+True mean: 92.52289478897879
+Predicted mean: 92.45219024204698
+
+MAE: 30.88607152372649
+RMSE: 37.56266445200724
+R2: 0.27451410659521136
+
+Region: 1
+True mean: 68.78648033443964
+Predicted mean: 68.80301891138748
+
+MAE: 0.7178720755020909
+RMSE: 0.8895304248365526
+R2: 0.9996237751522308
+
+Region: 2
+True mean: 94.83766113524678
+Predicted mean: 94.95110980489686
+
+MAE: 33.027592410434245
+RMSE: 40.3067636097363
+R2: 0.1952316762928613
+</pre></div>
+</div>
+</div>
+</div>
+<p>The prediction accuracy for region 1 is immediately striking, but there are fewer stocks there as well.</p>
+</section>
+<section id="profit-calculation">
+<h2>Profit calculation<a class="headerlink" href="#profit-calculation" title="Link to this heading">#</a></h2>
+<p>According to the terms of the problem:</p>
+<ul class="simple">
+<li><p>A budget of 10 billion rubles has been allocated for the development. This amount has to be recouped.</p></li>
+<li><p>It is possible to drill 200 wells out of the 500 considered.</p></li>
+<li><p>For each thousand barrels we get a profit of 450,000 rubles.</p></li>
+<li><p>The probability of loss must be less than 2.5%.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TOTAL</span> <span class="o">=</span> <span class="mi">10000000000</span>
+<span class="n">PRICE</span> <span class="o">=</span> <span class="mi">450000</span>
+<span class="n">NUMBER</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">SAMPLE</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">PROBABILITY</span> <span class="o">=</span> <span class="mf">0.025</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">TOTAL</span> <span class="o">/</span> <span class="n">NUMBER</span> <span class="o">/</span> <span class="n">PRICE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>111.11111111111111
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is roughly how many thousands of barrels an average well needs to produce to break even.</p>
+<p>When compared to the mean values, it becomes clear that not every point will do.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">revenue</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">predictions</span><span class="p">):</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="n">NUMBER</span><span class="p">]</span>
+    <span class="c1"># print(len(target[selected.index]))</span>
+    <span class="k">return</span> <span class="n">target</span><span class="p">[</span><span class="n">selected</span><span class="o">.</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="n">PRICE</span> <span class="o">-</span> <span class="n">TOTAL</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">revenue</span><span class="p">(</span><span class="n">target_valid</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="n">SAMPLE</span><span class="p">],</span> <span class="n">predictions_valid</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="n">SAMPLE</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>201627345.91400337
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s build a profit distribution based on 1000 samples of 500 points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+
+<span class="n">income</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="p">[],</span> <span class="mi">1</span><span class="p">:</span> <span class="p">[],</span> <span class="mi">2</span><span class="p">:</span> <span class="p">[]}</span>
+<span class="n">product</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="p">[],</span> <span class="mi">1</span><span class="p">:</span> <span class="p">[],</span> <span class="mi">2</span><span class="p">:</span> <span class="p">[]}</span>
+<span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">subsample</span> <span class="o">=</span> <span class="n">predictions_valid</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">SAMPLE</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">state</span><span class="p">)</span>
+        <span class="n">product</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subsample</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="n">NUMBER</span><span class="p">])</span>
+        <span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">revenue</span><span class="p">(</span><span class="n">target_valid</span><span class="p">[</span><span class="n">data</span><span class="p">][</span><span class="n">subsample</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">subsample</span><span class="p">))</span>
+<span class="n">income</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">income</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The distribution is built on 25% of the data (validation sample).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.740369e+08</td>
+      <td>5.612207e+08</td>
+      <td>3.059560e+07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.830754e+07</td>
+      <td>5.504601e+08</td>
+      <td>3.715849e+08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.990190e+08</td>
+      <td>4.620119e+08</td>
+      <td>5.156360e+08</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5.627104e+08</td>
+      <td>4.277398e+08</td>
+      <td>2.495204e+08</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.933146e+08</td>
+      <td>5.340393e+08</td>
+      <td>3.872039e+08</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">product</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10355    167.130910
+91162    152.703153
+96253    150.591938
+97429    150.519751
+40096    147.963906
+            ...    
+63581     96.634319
+92222     96.532565
+49251     96.418725
+85333     96.341837
+74017     96.288065
+Name: product_pred, Length: 200, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">product</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>113.49554679068015
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>174036861.40742683
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first of 3,000 samples paid off at 501 million.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d8b3f446a493e436fe72be7f9b44d82360f32b5554c84a7d45580041c3c9e7fa.png" src="_images/d8b3f446a493e436fe72be7f9b44d82360f32b5554c84a7d45580041c3c9e7fa.png" />
+</div>
+</div>
+<p>At first glance, the income is normally distributed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">income</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">income</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Region </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Income, billions&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b60d3a3260fff5a71a3b9da2ee8dbf32cf131144c97c50ff3967db58f5c91023.png" src="_images/b60d3a3260fff5a71a3b9da2ee8dbf32cf131144c97c50ff3967db58f5c91023.png" />
+<img alt="_images/ce7b996a18968ca7bcf1db3e71c67b25d588dbd03c5cca8ebea33cd282d7da49.png" src="_images/ce7b996a18968ca7bcf1db3e71c67b25d588dbd03c5cca8ebea33cd282d7da49.png" />
+<img alt="_images/c29a46f494622ef52da25b8d435819425d7223fc4c31764cb941badf71b5c305.png" src="_images/c29a46f494622ef52da25b8d435819425d7223fc4c31764cb941badf71b5c305.png" />
+</div>
+</div>
+<p>Let’s check this with tests.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Region </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Income, billions&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>    
+    
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">sm</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]),</span> <span class="n">line</span><span class="o">=</span><span class="s1">&#39;45&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>   
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Region </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Income, billions&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
+    
+    <span class="k">if</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">])</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shapiro-Wilk test: This data is not from a normal distribution&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(p-value: </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shapiro</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">])</span><span class="o">.</span><span class="n">pvalue</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shapiro-Wilk test: This data is from a normal distribution&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(p-value: </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shapiro</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">])</span><span class="o">.</span><span class="n">pvalue</span><span class="p">))</span>
+        
+    <span class="k">if</span> <span class="n">kstest</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]),</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kolmogorov-Smirnov test: This data is not from a normal distribution&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(p-value: </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">kstest</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]),</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kolmogorov-Smirnov test: This data is from a normal distribution&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(p-value: </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">kstest</span><span class="p">(</span><span class="n">zscore</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]),</span> <span class="s1">&#39;norm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">))</span>
+        
+    <span class="n">anderson_result</span> <span class="o">=</span> <span class="n">anderson</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">],</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
+    <span class="n">anderson_votes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">anderson_votes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">anderson_result</span><span class="o">.</span><span class="n">statistic</span> <span class="o">&gt;</span> <span class="n">anderson_result</span><span class="o">.</span><span class="n">critical_values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> 
+    <span class="n">anderson_votes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">anderson_votes</span><span class="p">)</span>
+    <span class="c1"># print(anderson_result)</span>
+    <span class="k">if</span> <span class="n">anderson_votes</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Anderson-Darling test: This data is not from a normal distribution&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(reject H0, times: </span><span class="si">{}</span><span class="s1">/5)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">anderson_votes</span><span class="o">.</span><span class="n">sum</span><span class="p">())))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Anderson-Darling test: This data is from a normal distribution&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(reject H0, times: </span><span class="si">{}</span><span class="s1">/5)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">anderson_votes</span><span class="o">.</span><span class="n">sum</span><span class="p">())))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/67860ea88c5d854c66a53aedf1b7db6fc025c6047884bfef3cb9f3ebcaa484ee.png" src="_images/67860ea88c5d854c66a53aedf1b7db6fc025c6047884bfef3cb9f3ebcaa484ee.png" />
+<img alt="_images/b320092eb9c2ec1892d94a941d96f875f5a2ee302657e4fe9907e7142492a577.png" src="_images/b320092eb9c2ec1892d94a941d96f875f5a2ee302657e4fe9907e7142492a577.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shapiro-Wilk test: This data is from a normal distribution
+(p-value: 0.4682195484638214)
+Kolmogorov-Smirnov test: This data is from a normal distribution
+(p-value: 0.43782753604817404)
+Anderson-Darling test: This data is from a normal distribution
+(reject H0, times: 0/5)
+</pre></div>
+</div>
+<img alt="_images/5df7dd2095623d3a0c97d4a145f20f594c2fe3825c761caa3dd2d473392cdb58.png" src="_images/5df7dd2095623d3a0c97d4a145f20f594c2fe3825c761caa3dd2d473392cdb58.png" />
+<img alt="_images/5becf7edfc5001e1e781bd1540bdc49bac23fa9d6025adb7a039a52b895b22da.png" src="_images/5becf7edfc5001e1e781bd1540bdc49bac23fa9d6025adb7a039a52b895b22da.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shapiro-Wilk test: This data is from a normal distribution
+(p-value: 0.7872468829154968)
+Kolmogorov-Smirnov test: This data is from a normal distribution
+(p-value: 0.8589276898110905)
+Anderson-Darling test: This data is from a normal distribution
+(reject H0, times: 0/5)
+</pre></div>
+</div>
+<img alt="_images/7484c52686434ebef7ed63a0b1dbad410e06ff0f740a35b0e18cce32ffa7710b.png" src="_images/7484c52686434ebef7ed63a0b1dbad410e06ff0f740a35b0e18cce32ffa7710b.png" />
+<img alt="_images/d9dc2f5ed27f02c3fd9d7ea9c6768f98e68cc8075ff2adf3ca85be5ba60df84f.png" src="_images/d9dc2f5ed27f02c3fd9d7ea9c6768f98e68cc8075ff2adf3ca85be5ba60df84f.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shapiro-Wilk test: This data is from a normal distribution
+(p-value: 0.11885708570480347)
+Kolmogorov-Smirnov test: This data is from a normal distribution
+(p-value: 0.33005084638144866)
+Anderson-Darling test: This data is not from a normal distribution
+(reject H0, times: 3/5)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="profitability-assessment">
+<h2>Profitability assessment<a class="headerlink" href="#profitability-assessment" title="Link to this heading">#</a></h2>
+<p>To select the best region, we compare the mean values, construct a confidence interval and estimate the risks of loss.</p>
+<section id="comparison-of-mean-values">
+<h3>Comparison of mean values<a class="headerlink" href="#comparison-of-mean-values" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    4.157042e+08
+1    4.470127e+08
+2    3.350558e+08
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first region looks the most profitable. Moreover, the model had high accuracy in this region. However, the average reserves are lower than the other two. Apparently, it is heterogeneous, i.e. there are a lot of both poor and rich points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d2bb86322cf845c7fd162d6f919b1beb8332a84f5bdd2b7bbd21154f892fe93b.png" src="_images/d2bb86322cf845c7fd162d6f919b1beb8332a84f5bdd2b7bbd21154f892fe93b.png" />
+</div>
+</div>
+<p>Let’s compare it to the other two:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dfb330a4e8c6d41398443c4abe11de998676d239b11e08a378a1b9e532ee06a5.png" src="_images/dfb330a4e8c6d41398443c4abe11de998676d239b11e08a378a1b9e532ee06a5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b77877c1852169071c147eb786f216697cffaaf6b6e77ed5decc008af75d54ec.png" src="_images/b77877c1852169071c147eb786f216697cffaaf6b6e77ed5decc008af75d54ec.png" />
+</div>
+</div>
+<p>It’s all a little suspicious.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53864    137.945408
+97083    137.945408
+88340    137.945408
+64879    137.945408
+7288     137.945408
+            ...    
+67767      0.000000
+36443      0.000000
+36430      0.000000
+67776      0.000000
+42537      0.000000
+Name: product, Length: 100000, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53.906522     8472
+26.953261     8468
+84.038886     8431
+57.085625     8390
+3.179103      8337
+80.859783     8320
+30.132364     8306
+134.766305    8304
+110.992147    8303
+0.000000      8235
+137.945408    8233
+107.813044    8201
+Name: product, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.000000      1
+30.141653     1
+56.573577     1
+50.182301     1
+88.989990     1
+             ..
+146.560758    1
+155.729658    1
+27.829511     1
+85.382946     1
+154.424007    1
+Name: product, Length: 100000, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The statement of the problem says the data is synthetic, but I didn’t think it was that much.</p>
+</section>
+<section id="confidence-interval">
+<h3>Confidence interval<a class="headerlink" href="#confidence-interval" title="Link to this heading">#</a></h3>
+<p>Let’s build the confidence intervals for the income in all three regions based on the bootstrap resamples obtained above. We can either build an interval for the income itself with so-called percentile intervals or calculate the confidence interval for the mean income (assuming that it is normally distributed).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confidence intervals for profit, millions&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    
+    <span class="c1"># percentile interval for income</span>
+    <span class="n">income_left_border</span><span class="p">,</span> <span class="n">income_right_border</span> <span class="o">=</span> <span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.025</span><span class="p">),</span> 
+                                               <span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.975</span><span class="p">))</span>
+    <span class="c1"># confidence interval bounds for mean income </span>
+    <span class="n">mean_income_left_border</span><span class="p">,</span> <span class="n">mean_income_right_border</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span>
+        <span class="mf">0.95</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scale</span><span class="o">=</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">sem</span><span class="p">())</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Region </span><span class="si">{}</span><span class="s1">, percentile bounds for income:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> 
+          <span class="p">(</span><span class="n">income_left_border</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">,</span> <span class="n">income_right_border</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Region </span><span class="si">{}</span><span class="s1">, confidence interval bounds for mean income:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> 
+          <span class="p">(</span><span class="n">mean_income_left_border</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">,</span> <span class="n">mean_income_right_border</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">))</span>
+
+    <span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">income</span><span class="p">[</span><span class="n">data</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">income_left_border</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Percentile bounds for income&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">income_right_border</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">mean_income_left_border</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Bounds for mean income&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">mean_income_right_border</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Region </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Income, millions&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;sci&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">scilimits</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confidence intervals for profit, millions
+Region 0, percentile bounds for income: (-58.1890014073565, 887.1677696353535)
+Region 0, confidence interval bounds for mean income: (400.11992112572364, 431.2883812911256)
+</pre></div>
+</div>
+<img alt="_images/e3871fa769d5cf5ea3da9bb18b13937853527f43933107ca074304c65269081f.png" src="_images/e3871fa769d5cf5ea3da9bb18b13937853527f43933107ca074304c65269081f.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Region 1, percentile bounds for income: (47.440717862944034, 840.21335626002)
+Region 1, confidence interval bounds for mean income: (434.2636844512239, 459.7617051807616)
+</pre></div>
+</div>
+<img alt="_images/325e40454b5c8e56993aaded86c43eb84f12be15f532e2e8a82fe5318dc052b5.png" src="_images/325e40454b5c8e56993aaded86c43eb84f12be15f532e2e8a82fe5318dc052b5.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Region 2, percentile bounds for income: (-214.90347517056236, 839.2865764431807)
+Region 2, confidence interval bounds for mean income: (318.4947845594229, 351.61673876210995)
+</pre></div>
+</div>
+<img alt="_images/efbca8b5595ab6e57b96141787318e3dc9fabfa2faa07e99d3323a9b63922ad6.png" src="_images/efbca8b5595ab6e57b96141787318e3dc9fabfa2faa07e99d3323a9b63922ad6.png" />
+</div>
+</div>
+<p>I think the percentile intervals make more sense for the income estimation, taken into account the bootstrap evaluation approach.</p>
+</section>
+<section id="risk-of-loss">
+<h3>Risk of loss<a class="headerlink" href="#risk-of-loss" title="Link to this heading">#</a></h3>
+<p>Let’s find for each region the ratio of unprofitable samples to all samples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fraction for the region </span><span class="si">{}</span><span class="s1">:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">income</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">income</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fraction for the region 0: 0.044
+Fraction for the region 1: 0.016
+Fraction for the region 2: 0.107
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">income</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.044
+1    0.016
+2    0.107
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The risk of losses for the second region is higher than the threshold (4.9%), so we should choose between the first and the zero region. The average income in the first region is slightly higher, but the data there are distributed in an unnatural way. If it turns out that they were obtained in a way that does not reflect reality, we should switch to the zero region, where the data are distributed more or less normally.</p>
+</section>
+</section>
+<section id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Data specifications</p></li>
+</ol>
+<ul class="simple">
+<li><p>There are 49 repeating identifiers among the data. Not many, but we still need to understand where the repetitions come from.</p></li>
+<li><p>The oil volume in regions 0 and 2 is distributed close to normal, while in the first region the distribution is more like a uniform distribution with outliers.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Statistics</p></li>
+</ol>
+<ul class="simple">
+<li><p>The average oil reserves in region 1 are less than 70 thousand barrels, while in region 0 and 2 they are more than 90 thousand barrels.</p></li>
+<li><p>The linear regression perfectly predicts oil volumes in region 1 (expectedly, given the distribution), while for the other two it works worse (RMSE about 40 thousand barrels).</p></li>
+<li><p>The average profit is maximized for the samples of the first region (447 million), followed by the zero region (416 million), then the second one (335 million).</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Issues and recommendations</p></li>
+</ol>
+<ul class="simple">
+<li><p>The highest risk of loss is for the second region. It is 10.7%. Region zero is noticeably safer (4.4%). The lowest risks are predicted for the first region (1.6%), which, however, may not reflect reality.</p></li>
+<li><p>The nature of the data for the first region raises questions. In fact, there are 12 numbers duplicated about 8,000 times. This is implausible and needs to be clarified to make the right business decision.</p></li>
+<li><p>Based on all of the above, I suggest choosing the <strong>zero</strong> region for development. If it suddenly turns out that the numbers on oil reserves in the first region are plausible, then we can choose it, as there are slightly higher profits and lower risks.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="supervised_classification.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Customer churn</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="gold_recovery.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Gold recovery</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">Data preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values">Missing values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#duplicates">Duplicates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normality">Normality</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms-for-generation">Histograms for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plot-for-generation">QQ-plot for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#shapiro-wilk-test-for-generation">Shapiro-Wilk test for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kolmogorov-smirnov-test-for-generation">Kolmogorov-Smirnov test for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anderson-darling-test-for-generation">Anderson-Darling test for generation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram-for-data">Histogram for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plot-for-data">QQ-plot for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#shapiro-wilk-test-for-data">Shapiro-Wilk test for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kolmogorov-smirnov-test-for-data">Kolmogorov-Smirnov test for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anderson-darling-test-for-data">Anderson-Darling test for data</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling">Scaling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samples">Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training">Training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profit-calculation">Profit calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profitability-assessment">Profitability assessment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-mean-values">Comparison of mean values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-interval">Confidence interval</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-of-loss">Risk of loss</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Leonid Dybovskii
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
