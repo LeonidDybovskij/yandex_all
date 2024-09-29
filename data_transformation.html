@@ -185,7 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="oil_bootstrap.html">Selection of a location for a well</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gold_recovery.html">Gold recovery</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Protection of customers’ personal data</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="cars_boosting.html">Cars cost determination</a></li>
 <li class="toctree-l1"><a class="reference internal" href="taxi_time_series.html">Taxi orders prediction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_classification.html">Classification of comments</a></li>
@@ -339,32 +338,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Protection of customers’ personal data</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description">Data description</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values-and-duplicates">Missing values and duplicates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-functions">Selection functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-data">Initial data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-by-an-invertible-matrix">Multiplication by an invertible matrix</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm">Algorithm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#begin-pmatrix-y-1-y-2-y-k-end-pmatrix">$
-\begin{pmatrix}
-y_1 \
-y_2 \
-… \
-y_k
-\end{pmatrix}</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm">Algorithm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -1268,37 +1254,33 @@ y_k = (x_k, w) + w_0 = \sum \limits_{i=1}^{n} w_{i}x_{ki} + w_0
 \end{cases}
 \)</span></p>
 <p>can be written as a matrix</p>
-</section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="begin-pmatrix-y-1-y-2-y-k-end-pmatrix">
-<h1>$
+<p><span class="math notranslate nohighlight">\(
 \begin{pmatrix}
-y_1 \
-y_2 \
-… \
+y_1 \\
+y_2 \\
+... \\
 y_k
-\end{pmatrix}<a class="headerlink" href="#begin-pmatrix-y-1-y-2-y-k-end-pmatrix" title="Link to this heading">#</a></h1>
-<p>\begin{pmatrix}
-x_{11} &amp; x_{12} &amp; … &amp; x_{1n} \
-x_{21} &amp; x_{22} &amp; … &amp; x_{2n} \
-… &amp; … &amp; … &amp; …\
-x_{k1} &amp; x_{k2} &amp; … &amp; x_{kn}
+\end{pmatrix} = 
+\begin{pmatrix}
+x_{11} &amp; x_{12} &amp; ... &amp; x_{1n} \\
+x_{21} &amp; x_{22} &amp; ... &amp; x_{2n} \\
+... &amp; ... &amp; ... &amp; ...\\
+x_{k1} &amp; x_{k2} &amp; ... &amp; x_{kn}
 \end{pmatrix}
 \begin{pmatrix}
-w_1 \
-w_2 \
-… \
-w_n
+w_1 \\
+w_2 \\
+... \\
+w_n 
 \end{pmatrix}
-+
-\begin{pmatrix}
-w_0 \
-w_0 \
-… \
-w_0
+ + 
+ \begin{pmatrix}
+w_0 \\
+w_0 \\
+... \\
+w_0 
 \end{pmatrix}
-$</p>
+\)</span></p>
 <p>for short</p>
 <p><span class="math notranslate nohighlight">\(y = Xw + w_0\)</span></p>
 <p>During training, the vector of weights is calculated as</p>
@@ -1317,10 +1299,11 @@ w_p = ((XP)^TXP)^{-1}(XP)^Ty = (P^TX^TXP)^{-1}P^TX^Ty = P^{-1}(X^TX)^{-1}(P^T)^{
 <p>Since the predictions are calculated as <span class="math notranslate nohighlight">\(y = Xw + w_0\)</span>, then for training on the updated features we receive that</p>
 <p><span class="math notranslate nohighlight">\(y_p = XPw_p + w_0 = XPP^{-1}w + w_0 = XEw + w_0 = Xw + w_0 = y\)</span>.</p>
 <p>So, in theory, the quality won’t change.</p>
+</section>
 <section id="algorithm">
-<h2>Algorithm<a class="headerlink" href="#algorithm" title="Link to this heading">#</a></h2>
+<h3>Algorithm<a class="headerlink" href="#algorithm" title="Link to this heading">#</a></h3>
 <p>Thus, the conversion algorithm is as follows:</p>
-<p><img alt="110.png" src="attachment:5234c33e-8d75-4dad-a6bc-af6d8c4ca9b1.png" /></p>
+<p><img alt="110.png" src="attachment:https://github.com/LeonidDybovskij/yandex_all/images/110.png" /></p>
 <p>If we create a pair of two inverse matrices, we can multiply the features by one of them and use the second one as a key to get the initial data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1570,7 +1553,7 @@ dtype: int64
 </div>
 </section>
 <section id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h2>
+<h3>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h3>
 <p>Let’s describe the algorithm of transformation by a function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1591,7 +1574,7 @@ dtype: int64
 </div>
 </section>
 <section id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">#</a></h2>
+<h3>Testing<a class="headerlink" href="#testing" title="Link to this heading">#</a></h3>
 <p>Let’s see if the prediction accuracy changes for such features.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1819,6 +1802,7 @@ dtype: int64
 </div>
 <p>The quality hasn’t decreased.</p>
 </section>
+</section>
 <section id="conclusions">
 <h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -1893,32 +1877,19 @@ dtype: int64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Protection of customers’ personal data</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description">Data description</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values-and-duplicates">Missing values and duplicates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-functions">Selection functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-data">Initial data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-by-an-invertible-matrix">Multiplication by an invertible matrix</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm">Algorithm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#begin-pmatrix-y-1-y-2-y-k-end-pmatrix">$
-\begin{pmatrix}
-y_1 \
-y_2 \
-… \
-y_k
-\end{pmatrix}</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithm">Algorithm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
